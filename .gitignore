@@ -1,10 +1,104 @@
+# Archivos de entorno de Visual Studio
+.vs/
+.vscode/
 
-*.vsidx
-*.vsidx
-*.vsidx
-/.vs
-.vs/AppPanDulceria/FileContentIndex/1f21b5c4-caef-496d-a8f7-c3b43989c625.vsidx
-.vs/AppPanDulceria/FileContentIndex/1f21b5c4-caef-496d-a8f7-c3b43989c625.vsidx
-/.vs/AppPanDulceria/FileContentIndex
-/.vs/AppPanDulceria
-/.vs
+# Archivos de compilación de Visual Studio
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.pidb
+*.log
+*.tlog
+*.obj
+*.exe
+*.pdb
+*.dll
+*.cache
+*.ilk
+*.nupkg
+*.snk
+*.props
+*.targets
+*.ps1
+*.ruleset
+*.editorconfig
+*.ide-helper.php
+*.ipch
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb-shm
+*.VC.opendb-wal
+*.vspscc
+*.vssscc
+*.csproj.user
+*.csproj.FileListAbsolute.txt
+
+# Directorios de compilación
+bin/
+obj/
+TestResults/
+Release/
+Debug/
+.vscode/
+
+# Paquetes NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de configuración de usuario
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de servicio de Azure
+*.publishsettings
+**/App_Data/Logs/
+**/App_Data/Config/
+App_Data/
+
+# Archivos temporales
+*~
+
+# Archivos de prueba
+*.TestResults
+
+# Archivos de configuración local de ASP.NET
+.vs/
+
+# Configuración de Azure Functions
+local.settings.json
+
+# Logs de depuración
+*.log
+
+# Archivos generados por Rider
+.idea/
+.idea/*
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/modules.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/runConfigurations
+.idea/caches
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
