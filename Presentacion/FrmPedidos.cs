@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmProductos : Form
+    public partial class FrmPedidos : Form
     {
-        public FrmProductos()
+        public FrmPedidos()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

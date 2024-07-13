@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmProductos : Form
+    public partial class FrmNotificaciones : Form
     {
-        public FrmProductos()
+        public FrmNotificaciones()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
