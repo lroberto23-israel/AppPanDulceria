@@ -64,6 +64,36 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCredenciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCredenciales.Designer.cs">
+      <DependentUpon>FrmCredenciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngredientes.Designer.cs">
+      <DependentUpon>FrmIngredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNotificaciones.Designer.cs">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidos.Designer.cs">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCalorias.resx">
@@ -74,6 +104,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCredenciales.resx">
+      <DependentUpon>FrmCredenciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngredientes.resx">
+      <DependentUpon>FrmIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNotificaciones.resx">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
