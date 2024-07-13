@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class CaloriasDAO
+    public class CaloriasDAO
     {
         private Conexion conexion = new Conexion();
 
@@ -21,7 +21,7 @@ namespace AccesoDatos.DAO
             ejecutarSql.Connection = conexion.AbrirConnection();
             try
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_calorias(prd_id, cal_cantidad)" +
+                ejecutarSql.CommandText = "INSERT INTO tbl_calorias(prd_id, cal_cantidad)" +
                     "VALUES("+item.PrdId+", '"+item.CalCantidad+"')";
                 ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConnection();
@@ -38,7 +38,7 @@ namespace AccesoDatos.DAO
             try
             {
                 ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT cal_id, prd_id, cal_cantidad FROM uisrael.dbo.tbl_calorias WHERE cal_id="+item.CalId;
+                ejecutarSql.CommandText = "SELECT cal_id, prd_id, cal_cantidad FROM tbl_calorias WHERE cal_id="+item.CalId;
                 transacction=  ejecutarSql.ExecuteReader();
                 dt.Load(transacction);
                 conexion.CerrarConnection();

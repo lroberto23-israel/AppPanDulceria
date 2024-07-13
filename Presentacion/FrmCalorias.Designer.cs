@@ -125,10 +125,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Copperplate Gothic Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(330, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(72, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(60, 13);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "CALORIAS";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -145,6 +145,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmCalorias";
             this.Text = "FrmCalorias";
+            this.Load += new System.EventHandler(this.FrmCalorias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Calorias
+    public class Calorias
     {
         public int CalId { get; set; }
         public int PrdId { get; set; }
