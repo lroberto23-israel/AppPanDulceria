@@ -9,18 +9,15 @@ namespace AccesoDatos
 {
     internal class Conexion
     {
-        private SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=UISRAEL;Persist Security Info=True;User ID=sa;TrustServerCertificate=True");
+        private SqlConnection connection = new SqlConnection("Data Source=10.0.2.2;Initial Catalog=uisrael;User ID=sa;Password=Clave3123;TrustServerCertificate=True");
 
         public SqlConnection AbrirConnection()
 
         {
 
             if (connection.State == System.Data.ConnectionState.Closed)
-
             {
-
                 connection.Open();
-
             }
 
             return connection;

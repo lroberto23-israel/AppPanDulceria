@@ -99,7 +99,6 @@
             this.lblCatNombre.Size = new System.Drawing.Size(92, 13);
             this.lblCatNombre.TabIndex = 1;
             this.lblCatNombre.Text = "Nombre Categoria";
-            this.lblCatNombre.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCatId
             // 
@@ -145,6 +144,7 @@
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -154,6 +154,7 @@
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // FrmCategorias
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmCategorias";
             this.Text = "FrmCategorias";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Categorias
+    public class Categorias
     {
         public int        CatId { get; set; }
         public string CatNombre { get; set; }

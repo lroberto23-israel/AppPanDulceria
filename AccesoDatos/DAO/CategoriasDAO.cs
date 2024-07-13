@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class CategoriasDAO
+    public class CategoriasDAO
     {
         private Conexion conexion = new Conexion();
 
@@ -21,7 +21,12 @@ namespace AccesoDatos.DAO
             ejecutarSql.Connection = conexion.AbrirConnection();
             try
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_categorias ( cat_nombre, cat_descripcion) VALUES( '"+item.CatNombre+"', '"+item.CatDescripcion+"');";
+                string query = string.Format("INSERT INTO tbl_categorias (cat_nombre, cat_descripcion) " +
+                    " VALUES ('{0}', '{1}');"
+                    , item.CatNombre, item.CatDescripcion);
+
+                Console.WriteLine(query);
+                ejecutarSql.CommandText = query;
                 ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConnection();
             }

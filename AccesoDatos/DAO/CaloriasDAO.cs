@@ -21,7 +21,6 @@ namespace AccesoDatos.DAO
             ejecutarSql.Connection = conexion.AbrirConnection();
             try
             {
-
                 string query = string.Format("INSERT INTO tbl_calorias(prd_id, cal_cantidad)" +
                     " VALUES ('{0}', '{1}');"
                     , item.PrdId, item.CalCantidad);
