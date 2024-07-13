@@ -12,3 +12,12 @@
 .vs/AppPanDulceria/FileContentIndex/1f21b5c4-caef-496d-a8f7-c3b43989c625.vsidx
 /.vs
 /.vs
+*.cache
+*.resources
+*.dll
+*.pdb
+*.Up2Date
+*.txt
+*.exe
+*.config
+*.cache

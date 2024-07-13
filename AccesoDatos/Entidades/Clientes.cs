@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Clientes
+    public class Clientes
     {
         public int CliId { get; set; }
         public string CliNombre{ get; set; }

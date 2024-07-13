@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class ClientesDAO
+    public class ClientesDAO
     {
         private Conexion conexion = new Conexion();
 
@@ -21,7 +21,12 @@ namespace AccesoDatos.DAO
             ejecutarSql.Connection = conexion.AbrirConnection();
             try
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_clientes(cli_nombre, cli_correo, cli_telefono, cli_direccion) VALUES('', '', '', '')";
+                string query = string.Format("INSERT INTO tbl_clientes(cli_nombre, cli_correo, cli_telefono, cli_direccion)" +
+                    " VALUES ('{0}', '{1}','{2}', '{3}');"
+                    , item.CliNombre, item.CliCorreo, item.CliTelefono, item.CliDireccion);
+
+                Console.WriteLine(query);
+                ejecutarSql.CommandText = query;
                 ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConnection();
             }
@@ -39,7 +44,7 @@ namespace AccesoDatos.DAO
             try
             {
                 ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT cli_id, cli_nombre, cli_correo, cli_telefono, cli_direccion FROM uisrael.dbo.tbl_clientes";
+                ejecutarSql.CommandText = "SELECT cli_id, cli_nombre, cli_correo, cli_telefono, cli_direccion FROM tbl_clientes";
                 transacction = ejecutarSql.ExecuteReader();
                 dt.Load(transacction);
                 conexion.CerrarConnection();
