@@ -42,6 +42,8 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
@@ -49,6 +51,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxCategoria);
+            this.groupBox1.Controls.Add(this.lblCategoria);
             this.groupBox1.Controls.Add(this.txtPrdDescripcion);
             this.groupBox1.Controls.Add(this.txtPrdPrecio);
             this.groupBox1.Controls.Add(this.txtPrdNombre);
@@ -75,14 +79,14 @@
             // 
             // txtPrdPrecio
             // 
-            this.txtPrdPrecio.Location = new System.Drawing.Point(100, 119);
+            this.txtPrdPrecio.Location = new System.Drawing.Point(100, 133);
             this.txtPrdPrecio.Name = "txtPrdPrecio";
             this.txtPrdPrecio.Size = new System.Drawing.Size(156, 20);
             this.txtPrdPrecio.TabIndex = 7;
             // 
             // txtPrdNombre
             // 
-            this.txtPrdNombre.Location = new System.Drawing.Point(100, 74);
+            this.txtPrdNombre.Location = new System.Drawing.Point(100, 100);
             this.txtPrdNombre.Name = "txtPrdNombre";
             this.txtPrdNombre.Size = new System.Drawing.Size(156, 20);
             this.txtPrdNombre.TabIndex = 6;
@@ -107,7 +111,7 @@
             // lblPrdPrecio
             // 
             this.lblPrdPrecio.AutoSize = true;
-            this.lblPrdPrecio.Location = new System.Drawing.Point(6, 122);
+            this.lblPrdPrecio.Location = new System.Drawing.Point(3, 136);
             this.lblPrdPrecio.Name = "lblPrdPrecio";
             this.lblPrdPrecio.Size = new System.Drawing.Size(83, 13);
             this.lblPrdPrecio.TabIndex = 3;
@@ -116,7 +120,7 @@
             // lblPrdNombre
             // 
             this.lblPrdNombre.AutoSize = true;
-            this.lblPrdNombre.Location = new System.Drawing.Point(6, 77);
+            this.lblPrdNombre.Location = new System.Drawing.Point(6, 100);
             this.lblPrdNombre.Name = "lblPrdNombre";
             this.lblPrdNombre.Size = new System.Drawing.Size(90, 13);
             this.lblPrdNombre.TabIndex = 2;
@@ -125,7 +129,7 @@
             // lblProdId
             // 
             this.lblProdId.AutoSize = true;
-            this.lblProdId.Location = new System.Drawing.Point(29, 32);
+            this.lblProdId.Location = new System.Drawing.Point(3, 32);
             this.lblProdId.Name = "lblProdId";
             this.lblProdId.Size = new System.Drawing.Size(65, 13);
             this.lblProdId.TabIndex = 1;
@@ -178,6 +182,23 @@
             this.dtgProductos.Size = new System.Drawing.Size(545, 141);
             this.dtgProductos.TabIndex = 0;
             // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(6, 67);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.TabIndex = 9;
+            this.lblCategoria.Text = "Categoria";
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(100, 64);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(156, 21);
+            this.cbxCategoria.TabIndex = 10;
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,5 +235,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dtgProductos;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.Label lblCategoria;
     }
 }
