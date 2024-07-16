@@ -130,7 +130,6 @@
             this.lblProdId.Size = new System.Drawing.Size(65, 13);
             this.lblProdId.TabIndex = 1;
             this.lblProdId.Text = "Id_Producto";
-            this.lblProdId.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnNuevo
             // 
@@ -140,6 +139,7 @@
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -149,6 +149,7 @@
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblTitulo
             // 
@@ -187,6 +188,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmProductos";
             this.Text = "FrmProductos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

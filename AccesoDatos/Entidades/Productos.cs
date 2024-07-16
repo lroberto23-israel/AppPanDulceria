@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Productos
+    public class Productos
     {
         public int PrdId { get; set; }
         public string PrdNombre { get; set; }
         public string PrdDescripcion { get; set; }
         public float PrdPrecio { get; set; }
+        public int CatId { get; set; }
     }
 }

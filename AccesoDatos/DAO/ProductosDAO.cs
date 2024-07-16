@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class ProductosDAO
+    public class ProductosDAO
     {
         private Conexion conexion = new Conexion();
 
@@ -22,7 +22,15 @@ namespace AccesoDatos.DAO
             ejecutarSql.Connection = conexion.AbrirConnection();
             try
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_productos (prd_id, prd_nombre, prd_descripcion, prd_precio, cat_id) VALUES(0, '', '', 0, 0)";
+                ejecutarSql.CommandText = "INSERT INTO tbl_productos (prd_nombre, prd_descripcion, prd_precio, cat_id) VALUES('', '', 0, 0)";
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConnection();
+                string query = string.Format("INSERT INTO tbl_productos (prd_nombre, prd_descripcion, prd_precio, cat_id)" +
+                   " VALUES ('{0}', '{1}',{2}, {3},);"
+                   , item.PrdNombre, item.PrdDescripcion, item.PrdPrecio, item.CatId);
+
+                Console.WriteLine(query);
+                ejecutarSql.CommandText = query;
                 ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConnection();
             }
@@ -40,7 +48,7 @@ namespace AccesoDatos.DAO
             try
             {
                 ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT prd_id, prd_nombre, prd_descripcion, prd_precio, cat_id FROM uisrael.dbo.tbl_productos";
+                ejecutarSql.CommandText = "SELECT prd_id, prd_nombre, prd_descripcion, prd_precio, cat_id FROM tbl_productos";
                 transacction = ejecutarSql.ExecuteReader();
                 dt.Load(transacction);
                 conexion.CerrarConnection();
