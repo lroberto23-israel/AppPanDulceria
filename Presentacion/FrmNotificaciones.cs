@@ -16,5 +16,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void lblPrdDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

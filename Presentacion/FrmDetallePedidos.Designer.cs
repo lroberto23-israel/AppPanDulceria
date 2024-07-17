@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblIdProducto = new System.Windows.Forms.Label();
-            this.lblIdDetPedido = new System.Windows.Forms.Label();
-            this.lblCanPedido = new System.Windows.Forms.Label();
-            this.lblPrecioPedido = new System.Windows.Forms.Label();
-            this.cbxPedido = new System.Windows.Forms.ComboBox();
-            this.cbxProducto = new System.Windows.Forms.ComboBox();
-            this.txtIdPedDetalle = new System.Windows.Forms.TextBox();
-            this.txtCanPedido = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtCanPedido = new System.Windows.Forms.TextBox();
+            this.txtIdPedDetalle = new System.Windows.Forms.TextBox();
+            this.cbxProducto = new System.Windows.Forms.ComboBox();
+            this.cbxPedido = new System.Windows.Forms.ComboBox();
+            this.lblPrecioPedido = new System.Windows.Forms.Label();
+            this.lblCanPedido = new System.Windows.Forms.Label();
+            this.lblIdDetPedido = new System.Windows.Forms.Label();
+            this.lblIdProducto = new System.Windows.Forms.Label();
+            this.lblPedido = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.dtgDetPedido = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetPedido)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,42 +66,67 @@
             this.groupBox1.Controls.Add(this.lblCanPedido);
             this.groupBox1.Controls.Add(this.lblIdDetPedido);
             this.groupBox1.Controls.Add(this.lblIdProducto);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 30);
+            this.groupBox1.Controls.Add(this.lblPedido);
+            this.groupBox1.Location = new System.Drawing.Point(12, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 209);
+            this.groupBox1.Size = new System.Drawing.Size(667, 172);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // txtPrecio
             // 
-            this.groupBox2.Controls.Add(this.btnBorrar);
-            this.groupBox2.Controls.Add(this.btnModificar);
-            this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 245);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 42);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.txtPrecio.Location = new System.Drawing.Point(454, 79);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(160, 20);
+            this.txtPrecio.TabIndex = 9;
             // 
-            // label1
+            // txtCanPedido
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pedido";
+            this.txtCanPedido.Location = new System.Drawing.Point(454, 30);
+            this.txtCanPedido.Name = "txtCanPedido";
+            this.txtCanPedido.Size = new System.Drawing.Size(160, 20);
+            this.txtCanPedido.TabIndex = 8;
             // 
-            // lblIdProducto
+            // txtIdPedDetalle
             // 
-            this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(29, 122);
-            this.lblIdProducto.Name = "lblIdProducto";
-            this.lblIdProducto.Size = new System.Drawing.Size(50, 13);
-            this.lblIdProducto.TabIndex = 1;
-            this.lblIdProducto.Text = "Producto";
+            this.txtIdPedDetalle.Location = new System.Drawing.Point(123, 30);
+            this.txtIdPedDetalle.Name = "txtIdPedDetalle";
+            this.txtIdPedDetalle.Size = new System.Drawing.Size(177, 20);
+            this.txtIdPedDetalle.TabIndex = 7;
+            // 
+            // cbxProducto
+            // 
+            this.cbxProducto.FormattingEnabled = true;
+            this.cbxProducto.Location = new System.Drawing.Point(123, 114);
+            this.cbxProducto.Name = "cbxProducto";
+            this.cbxProducto.Size = new System.Drawing.Size(177, 21);
+            this.cbxProducto.TabIndex = 6;
+            // 
+            // cbxPedido
+            // 
+            this.cbxPedido.FormattingEnabled = true;
+            this.cbxPedido.Location = new System.Drawing.Point(123, 74);
+            this.cbxPedido.Name = "cbxPedido";
+            this.cbxPedido.Size = new System.Drawing.Size(177, 21);
+            this.cbxPedido.TabIndex = 5;
+            // 
+            // lblPrecioPedido
+            // 
+            this.lblPrecioPedido.AutoSize = true;
+            this.lblPrecioPedido.Location = new System.Drawing.Point(348, 82);
+            this.lblPrecioPedido.Name = "lblPrecioPedido";
+            this.lblPrecioPedido.Size = new System.Drawing.Size(76, 13);
+            this.lblPrecioPedido.TabIndex = 4;
+            this.lblPrecioPedido.Text = "Precio a pagar";
+            // 
+            // lblCanPedido
+            // 
+            this.lblCanPedido.AutoSize = true;
+            this.lblCanPedido.Location = new System.Drawing.Point(348, 33);
+            this.lblCanPedido.Name = "lblCanPedido";
+            this.lblCanPedido.Size = new System.Drawing.Size(85, 13);
+            this.lblCanPedido.TabIndex = 3;
+            this.lblCanPedido.Text = "Cantidad Pedido";
             // 
             // lblIdDetPedido
             // 
@@ -111,144 +138,139 @@
             this.lblIdDetPedido.Text = "Id Detalle Pedido";
             this.lblIdDetPedido.Click += new System.EventHandler(this.label3_Click);
             // 
-            // lblCanPedido
+            // lblIdProducto
             // 
-            this.lblCanPedido.AutoSize = true;
-            this.lblCanPedido.Location = new System.Drawing.Point(348, 33);
-            this.lblCanPedido.Name = "lblCanPedido";
-            this.lblCanPedido.Size = new System.Drawing.Size(85, 13);
-            this.lblCanPedido.TabIndex = 3;
-            this.lblCanPedido.Text = "Cantidad Pedido";
+            this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.Location = new System.Drawing.Point(29, 122);
+            this.lblIdProducto.Name = "lblIdProducto";
+            this.lblIdProducto.Size = new System.Drawing.Size(50, 13);
+            this.lblIdProducto.TabIndex = 1;
+            this.lblIdProducto.Text = "Producto";
             // 
-            // lblPrecioPedido
+            // lblPedido
             // 
-            this.lblPrecioPedido.AutoSize = true;
-            this.lblPrecioPedido.Location = new System.Drawing.Point(348, 82);
-            this.lblPrecioPedido.Name = "lblPrecioPedido";
-            this.lblPrecioPedido.Size = new System.Drawing.Size(76, 13);
-            this.lblPrecioPedido.TabIndex = 4;
-            this.lblPrecioPedido.Text = "Precio a pagar";
-            // 
-            // cbxPedido
-            // 
-            this.cbxPedido.FormattingEnabled = true;
-            this.cbxPedido.Location = new System.Drawing.Point(123, 74);
-            this.cbxPedido.Name = "cbxPedido";
-            this.cbxPedido.Size = new System.Drawing.Size(177, 21);
-            this.cbxPedido.TabIndex = 5;
-            // 
-            // cbxProducto
-            // 
-            this.cbxProducto.FormattingEnabled = true;
-            this.cbxProducto.Location = new System.Drawing.Point(123, 114);
-            this.cbxProducto.Name = "cbxProducto";
-            this.cbxProducto.Size = new System.Drawing.Size(177, 21);
-            this.cbxProducto.TabIndex = 6;
-            // 
-            // txtIdPedDetalle
-            // 
-            this.txtIdPedDetalle.Location = new System.Drawing.Point(123, 30);
-            this.txtIdPedDetalle.Name = "txtIdPedDetalle";
-            this.txtIdPedDetalle.Size = new System.Drawing.Size(177, 20);
-            this.txtIdPedDetalle.TabIndex = 7;
-            // 
-            // txtCanPedido
-            // 
-            this.txtCanPedido.Location = new System.Drawing.Point(454, 30);
-            this.txtCanPedido.Name = "txtCanPedido";
-            this.txtCanPedido.Size = new System.Drawing.Size(160, 20);
-            this.txtCanPedido.TabIndex = 8;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(454, 79);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(160, 20);
-            this.txtPrecio.TabIndex = 9;
+            this.lblPedido.AutoSize = true;
+            this.lblPedido.Location = new System.Drawing.Point(29, 77);
+            this.lblPedido.Name = "lblPedido";
+            this.lblPedido.Size = new System.Drawing.Size(40, 13);
+            this.lblPedido.TabIndex = 0;
+            this.lblPedido.Text = "Pedido";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(333, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(264, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(154, 26);
             this.lblTitulo.TabIndex = 10;
             this.lblTitulo.Text = "Detalle Pedidos";
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(266, 10);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(410, 10);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
             // dtgDetPedido
             // 
             this.dtgDetPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetPedido.Location = new System.Drawing.Point(6, 19);
+            this.dtgDetPedido.Location = new System.Drawing.Point(6, 11);
             this.dtgDetPedido.Name = "dtgDetPedido";
-            this.dtgDetPedido.Size = new System.Drawing.Size(764, 130);
+            this.dtgDetPedido.Size = new System.Drawing.Size(655, 146);
             this.dtgDetPedido.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dtgDetPedido);
-            this.groupBox3.Location = new System.Drawing.Point(12, 289);
+            this.groupBox3.Location = new System.Drawing.Point(12, 276);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(776, 159);
+            this.groupBox3.Size = new System.Drawing.Size(667, 162);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
-            // button1
+            // groupBox2
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(110, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.btnModificar);
+            this.groupBox2.Controls.Add(this.btnNuevo);
+            this.groupBox2.Controls.Add(this.btnGuardar);
+            this.groupBox2.Location = new System.Drawing.Point(12, 231);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(667, 42);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
             // 
-            // btnBorrar
+            // pictureBox1
             // 
-            this.btnBorrar.Image = global::Presentacion.Properties.Resources.eraser_1200;
-            this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrar.Location = new System.Drawing.Point(566, 10);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 3;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.detalle;
+            this.pictureBox1.Location = new System.Drawing.Point(210, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(426, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::Presentacion.Properties.Resources.archivo_de_edicion;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(313, 13);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = global::Presentacion.Properties.Resources.agregar_documento;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(203, 13);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::Presentacion.Properties.Resources.flecha_de_circulo_de_disquete_a_la_derecha;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(89, 13);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // FrmDetallePedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblTitulo);
+            this.ClientSize = new System.Drawing.Size(732, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDetallePedidos";
             this.Text = "FrmDetallePedidos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetPedido)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +279,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtCanPedido;
         private System.Windows.Forms.TextBox txtIdPedDetalle;
@@ -267,13 +288,15 @@
         private System.Windows.Forms.Label lblCanPedido;
         private System.Windows.Forms.Label lblIdDetPedido;
         private System.Windows.Forms.Label lblIdProducto;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPedido;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dtgDetPedido;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

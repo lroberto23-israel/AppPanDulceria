@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32422shortcake_98853 {
+            get {
+                object obj = ResourceManager.GetObject("32422shortcake_98853", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_documento {
             get {
                 object obj = ResourceManager.GetObject("agregar-documento", resourceCulture);
@@ -143,6 +153,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap detalle {
+            get {
+                object obj = ResourceManager.GetObject("detalle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eraser_1200 {
             get {
                 object obj = ResourceManager.GetObject("eraser_1200", resourceCulture);
@@ -176,6 +196,46 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap modificar {
             get {
                 object obj = ResourceManager.GetObject("modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notificacion {
+            get {
+                object obj = ResourceManager.GetObject("Notificacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ordering_25406 {
+            get {
+                object obj = ResourceManager.GetObject("Ordering_25406", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pasteleria {
+            get {
+                object obj = ResourceManager.GetObject("pasteleria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoppaymentorderbuy_04_icon_icons_com_73886 {
+            get {
+                object obj = ResourceManager.GetObject("shoppaymentorderbuy-04_icon-icons.com_73886", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

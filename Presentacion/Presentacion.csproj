@@ -205,8 +205,14 @@
     <None Include="Resources\categoria1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Notificacion.ico" />
+    <None Include="Resources\pasteleria.ico" />
+    <None Include="Resources\Ordering_25406.ico" />
+    <None Include="Resources\shoppaymentorderbuy-04_icon-icons.com_73886.ico" />
     <None Include="Resources\cliente.png" />
     <None Include="Resources\categoria2.png" />
+    <None Include="Resources\32422shortcake_98853.png" />
+    <None Include="Resources\detalle.ico" />
     <Content Include="Resources\eraser_1200.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
