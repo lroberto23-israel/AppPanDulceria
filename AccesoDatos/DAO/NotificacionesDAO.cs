@@ -12,45 +12,76 @@ namespace AccesoDatos.DAO
 {
     internal class NotificacionesDAO
     {
+
         private Conexion conexion = new Conexion();
-
-        SqlCommand ejecutarSql = new SqlCommand();
-        SqlDataReader transacction;
-
-        public void Insertar(Notificaciones item)
+        public DataTable List(Notificaciones item)
         {
-            ejecutarSql.Connection = conexion.AbrirConnection();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_notificaciones (not_id, cli_id, not_mensaje, not_fecha) VALUES(0, 0, '', '')";
-                ejecutarSql.ExecuteNonQuery();
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("" + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
-            }
+                    // Agregar parámetros si es necesario
+                    // command.Parameters.AddWithValue("@Param", item.Property);
 
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
         }
 
-        public DataTable Listar(Notificaciones item)
+        public bool Insert(Notificaciones item)
         {
-            DataTable dt = new DataTable();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT not_id, cli_id, not_mensaje, not_fecha FROM uisrael.dbo.tbl_notificaciones";
-                transacction = ejecutarSql.ExecuteReader();
-                dt.Load(transacction);
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error obteniendo los registros " + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
 
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
             }
-            return dt;
+        }
+
+        public bool Update(Notificaciones item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public bool Delete(Notificaciones item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
         }
     }
 }

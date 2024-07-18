@@ -11,45 +11,76 @@ namespace AccesoDatos.DAO
 {
     internal class CredencialesDAO
     {
+
         private Conexion conexion = new Conexion();
-
-        SqlCommand ejecutarSql = new SqlCommand();
-        SqlDataReader transacction;
-
-        public void Insertar(Credenciales item)
+        public DataTable List(Credenciales item)
         {
-            ejecutarSql.Connection = conexion.AbrirConnection();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.CommandText = "INSERT INTO uisrael.dbo.tbl_credenciales (cre_id, cli_id, cre_clave) VALUES(0, 0, '')";
-                ejecutarSql.ExecuteNonQuery();
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("" + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
-            }
+                    // Agregar parámetros si es necesario
+                    // command.Parameters.AddWithValue("@Param", item.Property);
 
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
         }
 
-        public DataTable Listar(Credenciales item)
+        public bool Insert(Credenciales item)
         {
-            DataTable dt = new DataTable();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT cre_id, cli_id, cre_clave FROM uisrael.dbo.tbl_credenciales";
-                transacction = ejecutarSql.ExecuteReader();
-                dt.Load(transacction);
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error obteniendo los registros" + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
 
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
             }
-            return dt;
+        }
+
+        public bool Update(Credenciales item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public bool Delete(Credenciales item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
         }
     }
 }

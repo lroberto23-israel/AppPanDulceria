@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DAO\CategoriasDAO.cs" />
-    <Compile Include="DAO\CaloriasDAO.cs" />
     <Compile Include="DAO\ClientesDAO.cs" />
     <Compile Include="DAO\ProductosDAO.cs" />
     <Compile Include="DAO\PedidosDAO.cs" />
@@ -52,7 +51,6 @@
     <Compile Include="DAO\IngredientesDAO.cs" />
     <Compile Include="DAO\DetallePedidoDAO.cs" />
     <Compile Include="DAO\CredencialesDAO.cs" />
-    <Compile Include="Entidades\Calorias.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Credenciales.cs" />
