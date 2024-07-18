@@ -48,6 +48,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblEstProducto = new System.Windows.Forms.Label();
+            this.chkEstProducto = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
@@ -57,6 +59,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkEstProducto);
+            this.groupBox1.Controls.Add(this.lblEstProducto);
             this.groupBox1.Controls.Add(this.cbxCategoria);
             this.groupBox1.Controls.Add(this.lblCategoria);
             this.groupBox1.Controls.Add(this.txtPrdDescripcion);
@@ -76,7 +80,7 @@
             // cbxCategoria
             // 
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(100, 64);
+            this.cbxCategoria.Location = new System.Drawing.Point(105, 50);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(156, 21);
             this.cbxCategoria.TabIndex = 10;
@@ -84,7 +88,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(6, 67);
+            this.lblCategoria.Location = new System.Drawing.Point(11, 53);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(52, 13);
             this.lblCategoria.TabIndex = 9;
@@ -92,7 +96,7 @@
             // 
             // txtPrdDescripcion
             // 
-            this.txtPrdDescripcion.Location = new System.Drawing.Point(314, 48);
+            this.txtPrdDescripcion.Location = new System.Drawing.Point(314, 41);
             this.txtPrdDescripcion.Multiline = true;
             this.txtPrdDescripcion.Name = "txtPrdDescripcion";
             this.txtPrdDescripcion.Size = new System.Drawing.Size(212, 87);
@@ -100,14 +104,14 @@
             // 
             // txtPrdPrecio
             // 
-            this.txtPrdPrecio.Location = new System.Drawing.Point(100, 133);
+            this.txtPrdPrecio.Location = new System.Drawing.Point(105, 119);
             this.txtPrdPrecio.Name = "txtPrdPrecio";
             this.txtPrdPrecio.Size = new System.Drawing.Size(156, 20);
             this.txtPrdPrecio.TabIndex = 7;
             // 
             // txtPrdNombre
             // 
-            this.txtPrdNombre.Location = new System.Drawing.Point(100, 100);
+            this.txtPrdNombre.Location = new System.Drawing.Point(105, 86);
             this.txtPrdNombre.Name = "txtPrdNombre";
             this.txtPrdNombre.Size = new System.Drawing.Size(156, 20);
             this.txtPrdNombre.TabIndex = 6;
@@ -115,7 +119,7 @@
             // txtPrdId
             // 
             this.txtPrdId.Enabled = false;
-            this.txtPrdId.Location = new System.Drawing.Point(100, 29);
+            this.txtPrdId.Location = new System.Drawing.Point(105, 15);
             this.txtPrdId.Name = "txtPrdId";
             this.txtPrdId.Size = new System.Drawing.Size(156, 20);
             this.txtPrdId.TabIndex = 5;
@@ -123,7 +127,7 @@
             // lblPrdDescripcion
             // 
             this.lblPrdDescripcion.AutoSize = true;
-            this.lblPrdDescripcion.Location = new System.Drawing.Point(357, 29);
+            this.lblPrdDescripcion.Location = new System.Drawing.Point(357, 20);
             this.lblPrdDescripcion.Name = "lblPrdDescripcion";
             this.lblPrdDescripcion.Size = new System.Drawing.Size(126, 13);
             this.lblPrdDescripcion.TabIndex = 4;
@@ -132,7 +136,7 @@
             // lblPrdPrecio
             // 
             this.lblPrdPrecio.AutoSize = true;
-            this.lblPrdPrecio.Location = new System.Drawing.Point(6, 136);
+            this.lblPrdPrecio.Location = new System.Drawing.Point(11, 122);
             this.lblPrdPrecio.Name = "lblPrdPrecio";
             this.lblPrdPrecio.Size = new System.Drawing.Size(83, 13);
             this.lblPrdPrecio.TabIndex = 3;
@@ -141,7 +145,7 @@
             // lblPrdNombre
             // 
             this.lblPrdNombre.AutoSize = true;
-            this.lblPrdNombre.Location = new System.Drawing.Point(6, 100);
+            this.lblPrdNombre.Location = new System.Drawing.Point(11, 86);
             this.lblPrdNombre.Name = "lblPrdNombre";
             this.lblPrdNombre.Size = new System.Drawing.Size(90, 13);
             this.lblPrdNombre.TabIndex = 2;
@@ -150,7 +154,7 @@
             // lblProdId
             // 
             this.lblProdId.AutoSize = true;
-            this.lblProdId.Location = new System.Drawing.Point(6, 32);
+            this.lblProdId.Location = new System.Drawing.Point(11, 18);
             this.lblProdId.Name = "lblProdId";
             this.lblProdId.Size = new System.Drawing.Size(65, 13);
             this.lblProdId.TabIndex = 1;
@@ -253,6 +257,24 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // lblEstProducto
+            // 
+            this.lblEstProducto.AutoSize = true;
+            this.lblEstProducto.Location = new System.Drawing.Point(11, 158);
+            this.lblEstProducto.Name = "lblEstProducto";
+            this.lblEstProducto.Size = new System.Drawing.Size(86, 13);
+            this.lblEstProducto.TabIndex = 11;
+            this.lblEstProducto.Text = "Estado Producto";
+            // 
+            // chkEstProducto
+            // 
+            this.chkEstProducto.AutoSize = true;
+            this.chkEstProducto.Location = new System.Drawing.Point(105, 158);
+            this.chkEstProducto.Name = "chkEstProducto";
+            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
+            this.chkEstProducto.TabIndex = 12;
+            this.chkEstProducto.UseVisualStyleBackColor = true;
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,5 +321,7 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkEstProducto;
+        private System.Windows.Forms.Label lblEstProducto;
     }
 }

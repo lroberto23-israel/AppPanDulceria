@@ -21,5 +21,10 @@ namespace Presentacion
         {
 
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

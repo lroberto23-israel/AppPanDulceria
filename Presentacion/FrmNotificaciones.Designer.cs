@@ -46,6 +46,8 @@
             this.dtgNotificaciones = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkEstNotificacion = new System.Windows.Forms.CheckBox();
+            this.lblEstNotificacion = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -55,6 +57,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkEstNotificacion);
+            this.groupBox1.Controls.Add(this.lblEstNotificacion);
             this.groupBox1.Controls.Add(this.cbxClientes);
             this.groupBox1.Controls.Add(this.lblListarClientes);
             this.groupBox1.Controls.Add(this.txtMenNotificacion);
@@ -234,6 +238,24 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // chkEstNotificacion
+            // 
+            this.chkEstNotificacion.AutoSize = true;
+            this.chkEstNotificacion.Location = new System.Drawing.Point(111, 141);
+            this.chkEstNotificacion.Name = "chkEstNotificacion";
+            this.chkEstNotificacion.Size = new System.Drawing.Size(15, 14);
+            this.chkEstNotificacion.TabIndex = 14;
+            this.chkEstNotificacion.UseVisualStyleBackColor = true;
+            // 
+            // lblEstNotificacion
+            // 
+            this.lblEstNotificacion.AutoSize = true;
+            this.lblEstNotificacion.Location = new System.Drawing.Point(6, 141);
+            this.lblEstNotificacion.Name = "lblEstNotificacion";
+            this.lblEstNotificacion.Size = new System.Drawing.Size(99, 13);
+            this.lblEstNotificacion.TabIndex = 13;
+            this.lblEstNotificacion.Text = "Estado Notificación";
+            // 
             // FrmNotificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,5 +299,7 @@
         private System.Windows.Forms.DataGridView dtgNotificaciones;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkEstNotificacion;
+        private System.Windows.Forms.Label lblEstNotificacion;
     }
 }
