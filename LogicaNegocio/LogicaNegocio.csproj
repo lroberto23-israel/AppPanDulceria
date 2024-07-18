@@ -44,6 +44,12 @@
     <Compile Include="LogicaCalorias.cs" />
     <Compile Include="LogicaCategorias.cs" />
     <Compile Include="LogicaClientes.cs" />
+    <Compile Include="LogicaCredenciales.cs" />
+    <Compile Include="LogicaDetPedido.cs" />
+    <Compile Include="LogicaIngredientes.cs" />
+    <Compile Include="LogicaNotificaciones.cs" />
+    <Compile Include="LogicaPagos.cs" />
+    <Compile Include="LogicaPedido.cs" />
     <Compile Include="LogicaProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
