@@ -11,5 +11,7 @@ namespace AccesoDatos.Entidades
         public int        CatId { get; set; }
         public string CatNombre { get; set; }
         public string CatDescripcion { get; set; }
+
+        public int CatEstado { get; set; }
     }
 }

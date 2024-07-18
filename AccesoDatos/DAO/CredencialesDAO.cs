@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class CredencialesDAO
+    public class CredencialesDAO
     {
 
         private Conexion conexion = new Conexion();

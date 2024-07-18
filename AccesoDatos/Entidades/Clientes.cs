@@ -13,5 +13,6 @@ namespace AccesoDatos.Entidades
         public string CliCorreo{ get; set; }
         public string CliTelefono{ get; set; }
         public string CliDireccion{ get; set; }
-}
+        public int CliEstado { get; set; }
+    }
 }

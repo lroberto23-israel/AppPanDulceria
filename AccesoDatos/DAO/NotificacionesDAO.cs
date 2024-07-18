@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class NotificacionesDAO
+    public class NotificacionesDAO
     {
 
         private Conexion conexion = new Conexion();

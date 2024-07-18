@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DAO
 {
-    internal class IngredientesDAO
+    public class IngredientesDAO
     {
 
         private Conexion conexion = new Conexion();

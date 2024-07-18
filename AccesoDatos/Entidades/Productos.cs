@@ -13,5 +13,6 @@ namespace AccesoDatos.Entidades
         public string PrdDescripcion { get; set; }
         public float PrdPrecio { get; set; }
         public int CatId { get; set; }
+        public int PrdEstado { get; set; }
     }
 }

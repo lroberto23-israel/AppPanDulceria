@@ -12,40 +12,68 @@ namespace LogicaNegocio
     public class LogicaCategorias
     {
 
-        private CategoriasDAO categoriasDAO;
+        private AccesoDatos.DAO.CategoriasDAO entityDao;
 
         public LogicaCategorias()
         {
-            categoriasDAO = new CategoriasDAO();
+            entityDao = new CategoriasDAO();
         }
 
-        public bool Insertar(Categorias item)
-        {
-            try
-            {
-                categoriasDAO.Insertar(item);
-                return true;
-
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-
-        public DataTable Listar(Categorias item)
+        public DataTable List(Categorias item)
         {
             DataTable dt = new DataTable();
             try
             {
-                dt = categoriasDAO.Listar(item);
+                dt = entityDao.List(item);
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
 
             return dt;
+
+        }
+
+
+        public bool Insert(Categorias item)
+        {
+            try
+            {
+                return entityDao.Insert(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public bool Update(Categorias item)
+        {
+            try
+            {
+                return entityDao.Update(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool Delete(Categorias item)
+        {
+            try
+            {
+                return entityDao.Delete(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }

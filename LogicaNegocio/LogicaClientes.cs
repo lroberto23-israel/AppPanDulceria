@@ -11,41 +11,70 @@ namespace LogicaNegocio
 {
     public class LogicaClientes
     {
-        private ClientesDAO clientesDAO;
-        private Clientes clientes;
+
+        private AccesoDatos.DAO.ClientesDAO entityDao;
+
 
         public LogicaClientes()
         {
-            clientesDAO = new ClientesDAO();
+            entityDao = new ClientesDAO();
         }
 
-        public bool Insertar(Clientes item)
-        {
-            try
-            {
-                clientesDAO.Insertar(item);
-                return true;
-
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-
-        public DataTable Listar(Clientes item)
+        public DataTable List(Clientes item)
         {
             DataTable dt = new DataTable();
             try
             {
-                dt = clientesDAO.Listar(item);
+                dt = entityDao.List(item);
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
 
             return dt;
+
+        }
+
+
+        public bool Insert(Clientes item)
+        {
+            try
+            {
+                return entityDao.Insert(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public bool Update(Clientes item)
+        {
+            try
+            {
+                return entityDao.Update(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool Delete(Clientes item)
+        {
+            try
+            {
+                return entityDao.Delete(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Credenciales
+    public class Credenciales
     {
         public int CreId { get; set; }
         public int CliId { get; set; }
         public string CreClave { get; set; }
+        public int CreEstado { get; set; }
     }
 }

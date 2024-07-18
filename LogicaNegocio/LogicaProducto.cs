@@ -11,41 +11,70 @@ namespace LogicaNegocio
 {
     public class LogicaProducto
     {
-        private ProductosDAO productosDAO;
-        private Productos productos;
+
+        private AccesoDatos.DAO.ProductosDAO entityDao;
+
 
         public LogicaProducto()
         {
-            productosDAO = new ProductosDAO();
+            entityDao = new ProductosDAO();
         }
 
-        public bool Insertar(Productos item)
-        {
-            try
-            {
-                productosDAO.Insertar(item);
-                return true;
-
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-
-        public DataTable Listar(Productos item)
+        public DataTable List(Productos item)
         {
             DataTable dt = new DataTable();
             try
             {
-                dt = productosDAO.Listar(item);
+                dt = entityDao.List(item);
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
 
             return dt;
+
+        }
+
+
+        public bool Insert(Productos item)
+        {
+            try
+            {
+                return entityDao.Insert(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public bool Update(Productos item)
+        {
+            try
+            {
+                return entityDao.Update(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool Delete(Productos item)
+        {
+            try
+            {
+                return entityDao.Delete(item);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }

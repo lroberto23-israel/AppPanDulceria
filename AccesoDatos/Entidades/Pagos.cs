@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class Pagos
+    public class Pagos
     {
 
         public int PagId { get; set; }
@@ -14,6 +14,7 @@ namespace AccesoDatos.Entidades
         public DateTime PagFecha { get; set; }
         public DateTime PagMonto { get; set; }
         public DateTime PagMetodo { get; set; }
+        public int PagEstado { get; set; }
 
     }
 }

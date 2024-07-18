@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.Entidades
 {
-    internal class DetallePedidos
+    public class DetallePedidos
     {
         public int DpeId { get; set; }
         public int PedId { get; set; }
         public int PrdId { get; set; }
         public float DpeCantidad { get; set; }
         public float DpePrecio { get; set; }
+        public int PedEstado { get; set; }
     }
 }
