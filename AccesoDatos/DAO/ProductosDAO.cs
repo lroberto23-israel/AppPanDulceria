@@ -12,53 +12,76 @@ namespace AccesoDatos.DAO
 {
     public class ProductosDAO
     {
+
         private Conexion conexion = new Conexion();
-
-        SqlCommand ejecutarSql = new SqlCommand();
-        SqlDataReader transacction;
-
-        public void Insertar(Productos item)
+        public DataTable List(Productos item)
         {
-            ejecutarSql.Connection = conexion.AbrirConnection();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.CommandText = "INSERT INTO tbl_productos (prd_nombre, prd_descripcion, prd_precio, cat_id) VALUES('', '', 0, 0)";
-                ejecutarSql.ExecuteNonQuery();
-                conexion.CerrarConnection();
-                string query = string.Format("INSERT INTO tbl_productos (prd_nombre, prd_descripcion, prd_precio, cat_id)" +
-                   " VALUES ('{0}', '{1}',{2}, {3},);"
-                   , item.PrdNombre, item.PrdDescripcion, item.PrdPrecio, item.CatId);
+                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
-                Console.WriteLine(query);
-                ejecutarSql.CommandText = query;
-                ejecutarSql.ExecuteNonQuery();
-                conexion.CerrarConnection();
+                    // Agregar parámetros si es necesario
+                    // command.Parameters.AddWithValue("@Param", item.Property);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
             }
-            catch (Exception ex)
-            {
-                throw new Exception("" + ex.Message);
-
-            }
-
         }
 
-        public DataTable Listar(Productos item)
+        public bool Insert(Productos item)
         {
-            DataTable dt = new DataTable();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT prd_id, prd_nombre, prd_descripcion, prd_precio, cat_id FROM tbl_productos";
-                transacction = ejecutarSql.ExecuteReader();
-                dt.Load(transacction);
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error obteniendo los registros " + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
 
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
             }
-            return dt;
+        }
+
+        public bool Update(Productos item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public bool Delete(Productos item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
         }
     }
 }

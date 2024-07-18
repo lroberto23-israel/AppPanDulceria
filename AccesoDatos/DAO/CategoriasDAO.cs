@@ -11,48 +11,76 @@ namespace AccesoDatos.DAO
 {
     public class CategoriasDAO
     {
+
         private Conexion conexion = new Conexion();
-
-        SqlCommand ejecutarSql = new SqlCommand();
-        SqlDataReader transacction;
-
-        public void Insertar(Categorias item)
+        public DataTable List(Categorias item)
         {
-            ejecutarSql.Connection = conexion.AbrirConnection();
-            try
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                string query = string.Format("INSERT INTO tbl_categorias (cat_nombre, cat_descripcion) " +
-                    " VALUES ('{0}', '{1}');"
-                    , item.CatNombre, item.CatDescripcion);
+                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
 
-                Console.WriteLine(query);
-                ejecutarSql.CommandText = query;
-                ejecutarSql.ExecuteNonQuery();
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex) {
-                throw new Exception("Error ingresando la categoria " + ex.Message);
-            
-            }
+                    // Agregar parámetros si es necesario
+                    // command.Parameters.AddWithValue("@Param", item.Property);
 
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
         }
 
-        public DataTable Listar(Categorias item) {
-            DataTable dt = new DataTable();
-            try
+        public bool Insert(Categorias item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
             {
-                ejecutarSql.Connection = conexion.AbrirConnection();
-                ejecutarSql.CommandText = "SELECT cat_id, cat_nombre, cat_descripcion FROM uisrael.dbo.tbl_categorias";
-                transacction=  ejecutarSql.ExecuteReader();
-                dt.Load(transacction);
-                conexion.CerrarConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error obteniendo los registros " + ex.Message);
+                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
 
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
             }
-            return dt;
+        }
+
+        public bool Update(Categorias item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Age", item.Age);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+
+        public bool Delete(Categorias item)
+        {
+            using (SqlConnection connection = conexion.AbrirConnection())
+            {
+                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    //command.Parameters.AddWithValue("@Id", item.Id);
+
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
         }
     }
 }
