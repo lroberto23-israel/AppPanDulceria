@@ -43,6 +43,8 @@
             this.dtgDetPedido = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkEstDetPedido = new System.Windows.Forms.CheckBox();
+            this.lblEstDetPedido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -57,7 +59,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkEstDetPedido);
             this.groupBox1.Controls.Add(this.txtPrecio);
+            this.groupBox1.Controls.Add(this.lblEstDetPedido);
             this.groupBox1.Controls.Add(this.txtCanPedido);
             this.groupBox1.Controls.Add(this.txtIdPedDetalle);
             this.groupBox1.Controls.Add(this.cbxProducto);
@@ -75,10 +79,11 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(454, 79);
+            this.txtPrecio.Location = new System.Drawing.Point(454, 74);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(160, 20);
             this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // txtCanPedido
             // 
@@ -113,7 +118,7 @@
             // lblPrecioPedido
             // 
             this.lblPrecioPedido.AutoSize = true;
-            this.lblPrecioPedido.Location = new System.Drawing.Point(348, 82);
+            this.lblPrecioPedido.Location = new System.Drawing.Point(348, 77);
             this.lblPrecioPedido.Name = "lblPrecioPedido";
             this.lblPrecioPedido.Size = new System.Drawing.Size(76, 13);
             this.lblPrecioPedido.TabIndex = 4;
@@ -195,13 +200,30 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
+            // chkEstDetPedido
+            // 
+            this.chkEstDetPedido.AutoSize = true;
+            this.chkEstDetPedido.Location = new System.Drawing.Point(454, 122);
+            this.chkEstDetPedido.Name = "chkEstDetPedido";
+            this.chkEstDetPedido.Size = new System.Drawing.Size(15, 14);
+            this.chkEstDetPedido.TabIndex = 15;
+            this.chkEstDetPedido.UseVisualStyleBackColor = true;
+            // 
+            // lblEstDetPedido
+            // 
+            this.lblEstDetPedido.AutoSize = true;
+            this.lblEstDetPedido.Location = new System.Drawing.Point(348, 122);
+            this.lblEstDetPedido.Name = "lblEstDetPedido";
+            this.lblEstDetPedido.Size = new System.Drawing.Size(99, 13);
+            this.lblEstDetPedido.TabIndex = 14;
+            this.lblEstDetPedido.Text = "Estado Det. Pedido";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.detalle;
-            this.pictureBox1.Location = new System.Drawing.Point(210, 2);
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.pedido;
+            this.pictureBox1.Location = new System.Drawing.Point(226, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(32, 41);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -257,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 450);
+            this.ClientSize = new System.Drawing.Size(715, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblTitulo);
@@ -298,5 +320,7 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkEstDetPedido;
+        private System.Windows.Forms.Label lblEstDetPedido;
     }
 }

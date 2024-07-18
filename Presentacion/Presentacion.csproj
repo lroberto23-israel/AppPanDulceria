@@ -205,6 +205,8 @@
     <None Include="Resources\categoria1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pedido.png" />
+    <None Include="Resources\ingredientes.png" />
     <None Include="Resources\Notificacion.ico" />
     <None Include="Resources\pasteleria.ico" />
     <None Include="Resources\Ordering_25406.ico" />

@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgPago = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMonPago = new System.Windows.Forms.TextBox();
             this.cbxPedido = new System.Windows.Forms.ComboBox();
             this.lblPedido = new System.Windows.Forms.Label();
             this.txtModPago = new System.Windows.Forms.TextBox();
@@ -43,11 +48,8 @@
             this.lblFecPago = new System.Windows.Forms.Label();
             this.lblIdPago = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.lblMonPago = new System.Windows.Forms.TextBox();
+            this.chkEstPago = new System.Windows.Forms.CheckBox();
+            this.lblEstPago = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPago)).BeginInit();
@@ -66,6 +68,54 @@
             this.groupBox3.Size = new System.Drawing.Size(557, 42);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(426, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::Presentacion.Properties.Resources.archivo_de_edicion;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(309, 13);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = global::Presentacion.Properties.Resources.agregar_documento;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(203, 13);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::Presentacion.Properties.Resources.flecha_de_circulo_de_disquete_a_la_derecha;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(89, 13);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -97,7 +147,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkEstPago);
             this.groupBox1.Controls.Add(this.lblMonPago);
+            this.groupBox1.Controls.Add(this.lblEstPago);
             this.groupBox1.Controls.Add(this.cbxPedido);
             this.groupBox1.Controls.Add(this.lblPedido);
             this.groupBox1.Controls.Add(this.txtModPago);
@@ -112,6 +164,13 @@
             this.groupBox1.Size = new System.Drawing.Size(557, 181);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            // 
+            // lblMonPago
+            // 
+            this.lblMonPago.Location = new System.Drawing.Point(395, 61);
+            this.lblMonPago.Name = "lblMonPago";
+            this.lblMonPago.Size = new System.Drawing.Size(156, 20);
+            this.lblMonPago.TabIndex = 11;
             // 
             // cbxPedido
             // 
@@ -198,60 +257,23 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // btnEliminar
+            // chkEstPago
             // 
-            this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(426, 13);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.chkEstPago.AutoSize = true;
+            this.chkEstPago.Location = new System.Drawing.Point(382, 107);
+            this.chkEstPago.Name = "chkEstPago";
+            this.chkEstPago.Size = new System.Drawing.Size(15, 14);
+            this.chkEstPago.TabIndex = 19;
+            this.chkEstPago.UseVisualStyleBackColor = true;
             // 
-            // btnModificar
+            // lblEstPago
             // 
-            this.btnModificar.Image = global::Presentacion.Properties.Resources.archivo_de_edicion;
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(309, 13);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 11;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::Presentacion.Properties.Resources.agregar_documento;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(203, 13);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 9;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::Presentacion.Properties.Resources.flecha_de_circulo_de_disquete_a_la_derecha;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(89, 13);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 8;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // lblMonPago
-            // 
-            this.lblMonPago.Location = new System.Drawing.Point(395, 61);
-            this.lblMonPago.Name = "lblMonPago";
-            this.lblMonPago.Size = new System.Drawing.Size(156, 20);
-            this.lblMonPago.TabIndex = 11;
+            this.lblEstPago.AutoSize = true;
+            this.lblEstPago.Location = new System.Drawing.Point(288, 107);
+            this.lblEstPago.Name = "lblEstPago";
+            this.lblEstPago.Size = new System.Drawing.Size(68, 13);
+            this.lblEstPago.TabIndex = 18;
+            this.lblEstPago.Text = "Estado Pago";
             // 
             // FrmPagos
             // 
@@ -298,5 +320,7 @@
         private System.Windows.Forms.Label lblFecPago;
         private System.Windows.Forms.Label lblIdPago;
         private System.Windows.Forms.TextBox lblMonPago;
+        private System.Windows.Forms.CheckBox chkEstPago;
+        private System.Windows.Forms.Label lblEstPago;
     }
 }

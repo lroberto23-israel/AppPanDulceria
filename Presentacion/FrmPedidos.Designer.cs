@@ -38,7 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtPedTotal = new System.Windows.Forms.TextBox();
-            this.txtPedEstado = new System.Windows.Forms.TextBox();
             this.txtPedHora = new System.Windows.Forms.TextBox();
             this.txtPedFecha = new System.Windows.Forms.TextBox();
             this.txtPedId = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkEstProducto = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPedidos)).BeginInit();
@@ -99,7 +99,7 @@
             // lblEstPedido
             // 
             this.lblEstPedido.AutoSize = true;
-            this.lblEstPedido.Location = new System.Drawing.Point(408, 47);
+            this.lblEstPedido.Location = new System.Drawing.Point(411, 88);
             this.lblEstPedido.Name = "lblEstPedido";
             this.lblEstPedido.Size = new System.Drawing.Size(93, 13);
             this.lblEstPedido.TabIndex = 4;
@@ -108,7 +108,7 @@
             // lblPedTotal
             // 
             this.lblPedTotal.AutoSize = true;
-            this.lblPedTotal.Location = new System.Drawing.Point(408, 92);
+            this.lblPedTotal.Location = new System.Drawing.Point(411, 47);
             this.lblPedTotal.Name = "lblPedTotal";
             this.lblPedTotal.Size = new System.Drawing.Size(82, 13);
             this.lblPedTotal.TabIndex = 5;
@@ -126,9 +126,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkEstProducto);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtPedTotal);
-            this.groupBox1.Controls.Add(this.txtPedEstado);
             this.groupBox1.Controls.Add(this.txtPedHora);
             this.groupBox1.Controls.Add(this.txtPedFecha);
             this.groupBox1.Controls.Add(this.txtPedId);
@@ -154,17 +154,10 @@
             // 
             // txtPedTotal
             // 
-            this.txtPedTotal.Location = new System.Drawing.Point(502, 89);
+            this.txtPedTotal.Location = new System.Drawing.Point(505, 44);
             this.txtPedTotal.Name = "txtPedTotal";
             this.txtPedTotal.Size = new System.Drawing.Size(100, 20);
             this.txtPedTotal.TabIndex = 14;
-            // 
-            // txtPedEstado
-            // 
-            this.txtPedEstado.Location = new System.Drawing.Point(502, 44);
-            this.txtPedEstado.Name = "txtPedEstado";
-            this.txtPedEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtPedEstado.TabIndex = 13;
             // 
             // txtPedHora
             // 
@@ -275,6 +268,15 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // chkEstProducto
+            // 
+            this.chkEstProducto.AutoSize = true;
+            this.chkEstProducto.Location = new System.Drawing.Point(505, 87);
+            this.chkEstProducto.Name = "chkEstProducto";
+            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
+            this.chkEstProducto.TabIndex = 15;
+            this.chkEstProducto.UseVisualStyleBackColor = true;
+            // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +313,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dtgPedidos;
         private System.Windows.Forms.TextBox txtPedTotal;
-        private System.Windows.Forms.TextBox txtPedEstado;
         private System.Windows.Forms.TextBox txtPedHora;
         private System.Windows.Forms.TextBox txtPedFecha;
         private System.Windows.Forms.TextBox txtPedId;
@@ -322,5 +323,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkEstProducto;
     }
 }
