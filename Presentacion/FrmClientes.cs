@@ -72,5 +72,10 @@ namespace Presentacion
                 MessageBox.Show($"ID: {id}, Name: {name}, Age: {age}");
             }
         }
+
+        private void txtCliDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCalorias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCalorias.Designer.cs">
-      <DependentUpon>FrmCalorias.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +108,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCalorias.resx">
-      <DependentUpon>FrmCalorias.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +196,10 @@
     <None Include="Resources\categoria1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pedidos12.png" />
+    <None Include="Resources\pedido12.png" />
+    <None Include="Resources\panaderia12.png" />
+    <None Include="Resources\panaderia.png" />
     <None Include="Resources\pedido.png" />
     <None Include="Resources\ingredientes.png" />
     <None Include="Resources\Notificacion.ico" />
@@ -215,6 +210,10 @@
     <None Include="Resources\categoria2.png" />
     <None Include="Resources\32422shortcake_98853.png" />
     <None Include="Resources\detalle.ico" />
+    <None Include="Resources\credential_3324737.png" />
+    <None Include="Resources\cliente1.png" />
+    <None Include="Resources\cliente16.png" />
+    <None Include="Resources\credencial12.png" />
     <Content Include="Resources\eraser_1200.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

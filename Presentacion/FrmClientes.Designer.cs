@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.txtCliDireccion = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtCliTelefono = new System.Windows.Forms.TextBox();
             this.txtCliCorreo = new System.Windows.Forms.TextBox();
             this.txtCliNombre = new System.Windows.Forms.TextBox();
@@ -44,16 +42,26 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chkEstCliente = new System.Windows.Forms.CheckBox();
+            this.lblEstCliente = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.chkEstCliente);
+            this.groupBox1.Controls.Add(this.lblEstCliente);
             this.groupBox1.Controls.Add(this.txtCliDireccion);
-            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtCliTelefono);
             this.groupBox1.Controls.Add(this.txtCliCorreo);
             this.groupBox1.Controls.Add(this.txtCliNombre);
@@ -63,43 +71,24 @@
             this.groupBox1.Controls.Add(this.lblCliCorreo);
             this.groupBox1.Controls.Add(this.lblCliNombre);
             this.groupBox1.Controls.Add(this.lblIdCliente);
-            this.groupBox1.Location = new System.Drawing.Point(12, 36);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(707, 187);
+            this.groupBox1.Size = new System.Drawing.Size(688, 166);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(108, 158);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // txtCliDireccion
             // 
-            this.txtCliDireccion.Location = new System.Drawing.Point(453, 74);
+            this.txtCliDireccion.Location = new System.Drawing.Point(453, 79);
             this.txtCliDireccion.Multiline = true;
             this.txtCliDireccion.Name = "txtCliDireccion";
-            this.txtCliDireccion.Size = new System.Drawing.Size(217, 62);
+            this.txtCliDireccion.Size = new System.Drawing.Size(217, 20);
             this.txtCliDireccion.TabIndex = 9;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(506, 158);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.txtCliDireccion.TextChanged += new System.EventHandler(this.txtCliDireccion_TextChanged);
             // 
             // txtCliTelefono
             // 
-            this.txtCliTelefono.Location = new System.Drawing.Point(453, 32);
+            this.txtCliTelefono.Location = new System.Drawing.Point(453, 36);
             this.txtCliTelefono.Name = "txtCliTelefono";
             this.txtCliTelefono.Size = new System.Drawing.Size(217, 20);
             this.txtCliTelefono.TabIndex = 8;
@@ -141,9 +130,9 @@
             this.lblCliTelefono.AutoSize = true;
             this.lblCliTelefono.Location = new System.Drawing.Point(316, 39);
             this.lblCliTelefono.Name = "lblCliTelefono";
-            this.lblCliTelefono.Size = new System.Drawing.Size(50, 13);
+            this.lblCliTelefono.Size = new System.Drawing.Size(110, 13);
             this.lblCliTelefono.TabIndex = 3;
-            this.lblCliTelefono.Text = "Contacto";
+            this.lblCliTelefono.Text = "Teléfono de Contacto";
             // 
             // lblCliCorreo
             // 
@@ -175,18 +164,18 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dtgClientes);
-            this.groupBox2.Location = new System.Drawing.Point(12, 229);
+            this.groupBox2.Location = new System.Drawing.Point(12, 275);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(707, 200);
+            this.groupBox2.Size = new System.Drawing.Size(688, 154);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // dtgClientes
             // 
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgClientes.Location = new System.Drawing.Point(6, 63);
+            this.dtgClientes.Location = new System.Drawing.Point(6, 17);
             this.dtgClientes.Name = "dtgClientes";
-            this.dtgClientes.Size = new System.Drawing.Size(695, 131);
+            this.dtgClientes.Size = new System.Drawing.Size(676, 131);
             this.dtgClientes.TabIndex = 0;
             this.dtgClientes.SelectionChanged += new System.EventHandler(this.dtgClientes_SelectionChanged);
             // 
@@ -194,17 +183,107 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(286, 7);
+            this.lblTitulo.Location = new System.Drawing.Point(266, 18);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(229, 26);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Información de Clientes";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnEliminar);
+            this.groupBox3.Controls.Add(this.btnModificar);
+            this.groupBox3.Controls.Add(this.btnNuevo);
+            this.groupBox3.Controls.Add(this.btnGuardar);
+            this.groupBox3.Location = new System.Drawing.Point(56, 229);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(626, 42);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            // 
+            // chkEstCliente
+            // 
+            this.chkEstCliente.AutoSize = true;
+            this.chkEstCliente.Location = new System.Drawing.Point(453, 126);
+            this.chkEstCliente.Name = "chkEstCliente";
+            this.chkEstCliente.Size = new System.Drawing.Size(15, 14);
+            this.chkEstCliente.TabIndex = 14;
+            this.chkEstCliente.UseVisualStyleBackColor = true;
+            // 
+            // lblEstCliente
+            // 
+            this.lblEstCliente.AutoSize = true;
+            this.lblEstCliente.Location = new System.Drawing.Point(316, 127);
+            this.lblEstCliente.Name = "lblEstCliente";
+            this.lblEstCliente.Size = new System.Drawing.Size(75, 13);
+            this.lblEstCliente.TabIndex = 13;
+            this.lblEstCliente.Text = "Estado Cliente";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.cliente1;
+            this.pictureBox1.Location = new System.Drawing.Point(196, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(426, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::Presentacion.Properties.Resources.archivo_de_edicion;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(309, 13);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = global::Presentacion.Properties.Resources.agregar_documento;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(203, 13);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::Presentacion.Properties.Resources.flecha_de_circulo_de_disquete_a_la_derecha;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(89, 13);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 441);
+            this.ClientSize = new System.Drawing.Size(731, 441);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -215,6 +294,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,8 +306,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dtgClientes;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblCliDireccion;
         private System.Windows.Forms.Label lblCliTelefono;
         private System.Windows.Forms.Label lblCliCorreo;
@@ -238,5 +317,13 @@
         private System.Windows.Forms.TextBox txtCliCorreo;
         private System.Windows.Forms.TextBox txtCliNombre;
         private System.Windows.Forms.TextBox txtCliId;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.CheckBox chkEstCliente;
+        private System.Windows.Forms.Label lblEstCliente;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

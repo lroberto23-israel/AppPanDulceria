@@ -155,26 +155,28 @@
             // 
             // ingresoCaloriasToolStripMenuItem
             // 
-            this.ingresoCaloriasToolStripMenuItem.Image = global::Presentacion.Properties.Resources.categoria2;
+            this.ingresoCaloriasToolStripMenuItem.Image = global::Presentacion.Properties.Resources.panaderia12;
             this.ingresoCaloriasToolStripMenuItem.Name = "ingresoCaloriasToolStripMenuItem";
             this.ingresoCaloriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ingresoCaloriasToolStripMenuItem.Text = "Categorias";
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.Image = global::Presentacion.Properties.Resources.cliente;
+            this.clientesToolStripMenuItem.Image = global::Presentacion.Properties.Resources.cliente16;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // credencialesToolStripMenuItem
             // 
+            this.credencialesToolStripMenuItem.Image = global::Presentacion.Properties.Resources.credencial12;
             this.credencialesToolStripMenuItem.Name = "credencialesToolStripMenuItem";
             this.credencialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.credencialesToolStripMenuItem.Text = "Credenciales";
             // 
             // detallePedidoToolStripMenuItem
             // 
+            this.detallePedidoToolStripMenuItem.Image = global::Presentacion.Properties.Resources.pedido12;
             this.detallePedidoToolStripMenuItem.Name = "detallePedidoToolStripMenuItem";
             this.detallePedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.detallePedidoToolStripMenuItem.Text = "Detalle Pedido";
@@ -199,6 +201,7 @@
             // 
             // pedidoToolStripMenuItem
             // 
+            this.pedidoToolStripMenuItem.Image = global::Presentacion.Properties.Resources.pedidos12;
             this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
             this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pedidoToolStripMenuItem.Text = "Pedido";

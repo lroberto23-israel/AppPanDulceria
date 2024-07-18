@@ -31,5 +31,10 @@ namespace Presentacion
         {
 
         }
+
+        private void txtCreId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

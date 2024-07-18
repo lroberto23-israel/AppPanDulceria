@@ -52,5 +52,10 @@ namespace Presentacion
             txtCatDescripcion.Text="";
 
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
