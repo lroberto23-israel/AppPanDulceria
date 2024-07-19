@@ -18,24 +18,70 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+        private  void abrirCategorias()
+        {
+            FrmCategorias frmitem = new FrmCategorias();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirClientes()
+        {
+            FrmClientes frmitem = new FrmClientes();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirCredenciales()
+        {
+            FrmCredenciales frmitem = new FrmCredenciales();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirDetallePedidos()
+        {
+            FrmDetallePedidos frmitem = new FrmDetallePedidos();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirIngredientes()
+        {
+            FrmIngredientes frmitem = new FrmIngredientes();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirNotificaciones()
+        {
+            FrmNotificaciones frmitem = new FrmNotificaciones();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirPagos()
+        {
+            FrmPagos frmitem = new FrmPagos();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirPedidos()
+        {
+            FrmPedidos frmitem = new FrmPedidos();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+        private void abrirProductos()
+        {
+            FrmProductos frmitem = new FrmProductos();
+            frmitem.MdiParent = this;
+            frmitem.Show();
+        }
+
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
+            abrirClientes();
         }
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            abrirCategorias();
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,28 +100,7 @@ namespace Presentacion
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
+              
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
@@ -102,6 +127,86 @@ namespace Presentacion
             {
                 childForm.Close();
             }
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirClientes();
+        }
+
+        private void ingresoCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirCategorias();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            abrirCredenciales();
+        }
+
+        private void credencialesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirCredenciales();
+        }
+
+        private void detallePedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirDetallePedidos();
+        }
+
+        private void printToolStripButton_Click(object sender, EventArgs e)
+        {
+            abrirDetallePedidos();
+        }
+
+        private void ingredientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirIngredientes();
+        }
+
+        private void printPreviewToolStripButton_Click(object sender, EventArgs e)
+        {
+            abrirIngredientes();
+        }
+
+        private void notificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirNotificaciones();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            abrirNotificaciones();
+        }
+
+        private void pagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirPagos();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            abrirPagos();
+        }
+
+        private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirPedidos();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            abrirPedidos();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirProductos();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            abrirProductos();
         }
     }
 }

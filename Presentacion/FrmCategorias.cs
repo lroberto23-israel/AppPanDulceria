@@ -40,7 +40,7 @@ namespace Presentacion
             currentItem = new Categorias();
             currentItem.CatNombre = txtCatNombre.Text;
             currentItem.CatDescripcion = txtCatDescripcion.Text;
-
+	    
             if (logicaCategorias.Insert(currentItem))
             {
                 listar();
@@ -49,8 +49,6 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
             }
         }
 

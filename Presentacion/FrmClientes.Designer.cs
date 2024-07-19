@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstCliente = new System.Windows.Forms.CheckBox();
+            this.lblEstCliente = new System.Windows.Forms.Label();
             this.txtCliDireccion = new System.Windows.Forms.TextBox();
             this.txtCliTelefono = new System.Windows.Forms.TextBox();
             this.txtCliCorreo = new System.Windows.Forms.TextBox();
@@ -43,13 +45,11 @@
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chkEstCliente = new System.Windows.Forms.CheckBox();
-            this.lblEstCliente = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -76,6 +76,24 @@
             this.groupBox1.Size = new System.Drawing.Size(688, 166);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // chkEstCliente
+            // 
+            this.chkEstCliente.AutoSize = true;
+            this.chkEstCliente.Location = new System.Drawing.Point(453, 126);
+            this.chkEstCliente.Name = "chkEstCliente";
+            this.chkEstCliente.Size = new System.Drawing.Size(15, 14);
+            this.chkEstCliente.TabIndex = 14;
+            this.chkEstCliente.UseVisualStyleBackColor = true;
+            // 
+            // lblEstCliente
+            // 
+            this.lblEstCliente.AutoSize = true;
+            this.lblEstCliente.Location = new System.Drawing.Point(316, 127);
+            this.lblEstCliente.Name = "lblEstCliente";
+            this.lblEstCliente.Size = new System.Drawing.Size(75, 13);
+            this.lblEstCliente.TabIndex = 13;
+            this.lblEstCliente.Text = "Estado Cliente";
             // 
             // txtCliDireccion
             // 
@@ -201,34 +219,6 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
-            // chkEstCliente
-            // 
-            this.chkEstCliente.AutoSize = true;
-            this.chkEstCliente.Location = new System.Drawing.Point(453, 126);
-            this.chkEstCliente.Name = "chkEstCliente";
-            this.chkEstCliente.Size = new System.Drawing.Size(15, 14);
-            this.chkEstCliente.TabIndex = 14;
-            this.chkEstCliente.UseVisualStyleBackColor = true;
-            // 
-            // lblEstCliente
-            // 
-            this.lblEstCliente.AutoSize = true;
-            this.lblEstCliente.Location = new System.Drawing.Point(316, 127);
-            this.lblEstCliente.Name = "lblEstCliente";
-            this.lblEstCliente.Size = new System.Drawing.Size(75, 13);
-            this.lblEstCliente.TabIndex = 13;
-            this.lblEstCliente.Text = "Estado Cliente";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.cliente1;
-            this.pictureBox1.Location = new System.Drawing.Point(196, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
@@ -276,6 +266,17 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.cliente1;
+            this.pictureBox1.Location = new System.Drawing.Point(196, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmClientes
             // 
