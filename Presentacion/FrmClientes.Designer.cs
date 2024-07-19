@@ -84,7 +84,7 @@
             this.txtCliDireccion.Name = "txtCliDireccion";
             this.txtCliDireccion.Size = new System.Drawing.Size(217, 20);
             this.txtCliDireccion.TabIndex = 9;
-            this.txtCliDireccion.TextChanged += new System.EventHandler(this.txtCliDireccion_TextChanged);
+
             // 
             // txtCliTelefono
             // 

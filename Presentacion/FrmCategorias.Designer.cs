@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstProducto = new System.Windows.Forms.CheckBox();
             this.txtCatDescripcion = new System.Windows.Forms.TextBox();
+            this.lblEstCategoria = new System.Windows.Forms.Label();
             this.txtCatNombre = new System.Windows.Forms.TextBox();
             this.txtCatId = new System.Windows.Forms.TextBox();
             this.lblCatDescripcion = new System.Windows.Forms.Label();
@@ -39,13 +41,11 @@
             this.dtgCategorias = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chkEstProducto = new System.Windows.Forms.CheckBox();
-            this.lblEstCategoria = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategorias)).BeginInit();
@@ -69,6 +69,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // chkEstProducto
+            // 
+            this.chkEstProducto.AutoSize = true;
+            this.chkEstProducto.Location = new System.Drawing.Point(435, 60);
+            this.chkEstProducto.Name = "chkEstProducto";
+            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
+            this.chkEstProducto.TabIndex = 14;
+            this.chkEstProducto.UseVisualStyleBackColor = true;
+            // 
             // txtCatDescripcion
             // 
             this.txtCatDescripcion.Location = new System.Drawing.Point(435, 12);
@@ -76,6 +85,15 @@
             this.txtCatDescripcion.Name = "txtCatDescripcion";
             this.txtCatDescripcion.Size = new System.Drawing.Size(178, 20);
             this.txtCatDescripcion.TabIndex = 5;
+            // 
+            // lblEstCategoria
+            // 
+            this.lblEstCategoria.AutoSize = true;
+            this.lblEstCategoria.Location = new System.Drawing.Point(322, 61);
+            this.lblEstCategoria.Name = "lblEstCategoria";
+            this.lblEstCategoria.Size = new System.Drawing.Size(93, 13);
+            this.lblEstCategoria.TabIndex = 13;
+            this.lblEstCategoria.Text = "Estado Categorias";
             // 
             // txtCatNombre
             // 
@@ -136,6 +154,7 @@
             this.dtgCategorias.Name = "dtgCategorias";
             this.dtgCategorias.Size = new System.Drawing.Size(649, 170);
             this.dtgCategorias.TabIndex = 0;
+            this.dtgCategorias.SelectionChanged += new System.EventHandler(this.dtgCategorias_SelectionChanged);
             // 
             // lblTitulo
             // 
@@ -146,7 +165,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(129, 26);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "CATEGORIAS";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // groupBox3
             // 
@@ -160,34 +178,6 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
-            // chkEstProducto
-            // 
-            this.chkEstProducto.AutoSize = true;
-            this.chkEstProducto.Location = new System.Drawing.Point(435, 60);
-            this.chkEstProducto.Name = "chkEstProducto";
-            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
-            this.chkEstProducto.TabIndex = 14;
-            this.chkEstProducto.UseVisualStyleBackColor = true;
-            // 
-            // lblEstCategoria
-            // 
-            this.lblEstCategoria.AutoSize = true;
-            this.lblEstCategoria.Location = new System.Drawing.Point(322, 61);
-            this.lblEstCategoria.Name = "lblEstCategoria";
-            this.lblEstCategoria.Size = new System.Drawing.Size(93, 13);
-            this.lblEstCategoria.TabIndex = 13;
-            this.lblEstCategoria.Text = "Estado Categorias";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.panaderia;
-            this.pictureBox1.Location = new System.Drawing.Point(273, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
@@ -199,6 +189,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -211,6 +202,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -223,6 +215,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // btnGuardar
             // 
@@ -235,6 +228,17 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.panaderia;
+            this.pictureBox1.Location = new System.Drawing.Point(273, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmCategorias
             // 

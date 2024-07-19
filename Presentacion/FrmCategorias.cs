@@ -31,7 +31,7 @@ namespace Presentacion
 
         private void listar()
         {
-            dtgCategorias.DataSource = logicaCategorias.Listar(null);
+            dtgCategorias.DataSource = logicaCategorias.List(null);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -41,21 +41,76 @@ namespace Presentacion
             currentItem.CatNombre = txtCatNombre.Text;
             currentItem.CatDescripcion = txtCatDescripcion.Text;
 
-            logicaCategorias.Insertar(currentItem);
+            if (logicaCategorias.Insert(currentItem))
+            {
+                listar();
+                MessageBox.Show("Ingreso exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            listar();
+
+            }
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            txtCatNombre.Text="";
-            txtCatDescripcion.Text="";
+            txtCatId.Text = "";
+            txtCatNombre.Text = "";
+            txtCatDescripcion.Text = "";
+            chkEstProducto.Checked = true;
 
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            currentItem = new Categorias();
+            currentItem.CatId = int.Parse(txtCatId.Text);
+            currentItem.CatNombre = txtCatNombre.Text;
+            currentItem.CatDescripcion = txtCatDescripcion.Text;
+            currentItem.CatEstado = chkEstProducto.Checked?1:0;
+
+            if (logicaCategorias.Update(currentItem))
+            {
+                listar();
+                MessageBox.Show("Actualizacion exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            currentItem = new Categorias();
+            currentItem.CatId = int.Parse(txtCatId.Text);
+
+            if (logicaCategorias.Delete(currentItem))
+            {
+                listar();
+                MessageBox.Show("Eliminado exitosamente");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dtgCategorias_SelectionChanged(object sender, EventArgs e)
         {
 
+            if (dtgCategorias.SelectedRows.Count > 0)
+            {
+                //cli_id, cli_nombre, cli_correo, cli_telefono, cli_direccion
+                var selectedRow = dtgCategorias.SelectedRows[0];
+                txtCatId.Text = selectedRow.Cells["cat_id"].Value.ToString();
+                txtCatNombre.Text = selectedRow.Cells["cat_nombre"].Value.ToString();
+                txtCatDescripcion.Text = selectedRow.Cells["cat_descripcion"].Value.ToString();
+                chkEstProducto.Checked = selectedRow.Cells["cat_estado"].Value.ToString() == "1";
+            }
         }
     }
 }

@@ -46,7 +46,7 @@ namespace Presentacion
             currentItem.CliTelefono = txtCliTelefono.Text;
             currentItem.CliDireccion = txtCliDireccion.Text;
 
-            logicaClientes.Insertar(currentItem);
+            logicaClientes.Insert(currentItem);
 
             listar();
 
@@ -54,7 +54,7 @@ namespace Presentacion
 
         private void listar()
         {
-            dtgClientes.DataSource=logicaClientes.Listar(null);
+            dtgClientes.DataSource=logicaClientes.List(null);
         }
 
         private void dtgClientes_SelectionChanged(object sender, EventArgs e)
@@ -73,9 +73,5 @@ namespace Presentacion
             }
         }
 
-        private void txtCliDireccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

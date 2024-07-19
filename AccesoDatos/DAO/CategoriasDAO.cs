@@ -17,7 +17,7 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                using (SqlCommand command = new SqlCommand("sp_GetAllCategorias", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -36,11 +36,11 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                using (SqlCommand command = new SqlCommand("sp_InsertCategoria", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@cat_nombre", item.CatNombre);
+                    command.Parameters.AddWithValue("@cat_descripcion", item.CatDescripcion);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -53,12 +53,13 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                using (SqlCommand command = new SqlCommand("sp_UpdateCategoria", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@cat_id", item.CatId);
+                    command.Parameters.AddWithValue("@cat_nombre", item.CatNombre);
+                    command.Parameters.AddWithValue("@cat_descripcion", item.CatDescripcion);
+                    command.Parameters.AddWithValue("@cat_estado", item.CatEstado);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -71,10 +72,10 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                using (SqlCommand command = new SqlCommand("sp_DeleteCategoria", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    command.Parameters.AddWithValue("@cat_id", item.CatId);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();

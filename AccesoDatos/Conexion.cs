@@ -9,36 +9,34 @@ namespace AccesoDatos
 {
     internal class Conexion
     {
-        private SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=UISRAEL;User ID=sa;Password=Clave3123;TrustServerCertificate=True");
-
+        private string connectionString = "Data Source=10.0.2.2;Initial Catalog=UISRAEL;User ID=sa;Password=Clave3123;TrustServerCertificate=True";
         public SqlConnection AbrirConnection()
-
         {
+            //if (connection.State == System.Data.ConnectionState.Closed)
+            //{
+            //    connection.Open();
+            //}
 
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection.Open();
-            }
-
+            SqlConnection connection = new SqlConnection(connectionString);
             return connection;
 
         }
 
-        public SqlConnection CerrarConnection()
+        //public SqlConnection CerrarConnection()
 
-        {
+        //{
 
-            if (connection.State == System.Data.ConnectionState.Open)
+        //    if (connection.State == System.Data.ConnectionState.Open)
 
-            {
+        //    {
 
-                connection.Close();
+        //        connection.Close();
 
-            }
+        //    }
 
-            return connection;
+        //    return connection;
 
-        }
+        //}
 
 
     }
