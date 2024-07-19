@@ -133,17 +133,26 @@
   <data name="Ordering_25406" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ordering_25406.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shoppaymentorderbuy-04_icon-icons.com_73886" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shoppaymentorderbuy-04_icon-icons.com_73886.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pedidos12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pedidos12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="producto12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\producto12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="archivo-de-edicion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo-de-edicion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ingrediente16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ingrediente16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoguardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoguardar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pedido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pedido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eraser_1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eraser_1200.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cliente16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cliente16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +166,8 @@
   <data name="detalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\detalle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="categoria1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\categoria1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eraser_1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eraser_1200.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar-documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +187,11 @@
   <data name="credencial12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\credencial12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shoppaymentorderbuy-04_icon-icons.com_73886" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shoppaymentorderbuy-04_icon-icons.com_73886.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="categoria1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categoria1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pedido12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pedido12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cliente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cliente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +199,14 @@
   <data name="modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\modificar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="notificacion16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notificacion16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="panaderia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panaderia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pedido12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pedido12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pago12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pago12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panaderia12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panaderia12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +214,7 @@
   <data name="borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pedidos12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pedidos12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cliente161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cliente161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -103,5 +103,12 @@ namespace Presentacion
                 childForm.Close();
             }
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.MdiParent = this;
+            frmClientes.Show();
+        }
     }
 }

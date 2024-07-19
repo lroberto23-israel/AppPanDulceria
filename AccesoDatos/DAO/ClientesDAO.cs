@@ -17,7 +17,7 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                using (SqlCommand command = new SqlCommand("sp_GetAllClientes", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -39,7 +39,7 @@ namespace AccesoDatos.DAO
                 using (SqlCommand command = new SqlCommand("sp_Insert", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Name", item.Name);
+                    //command.Parameters.AddWithValue("@Name", item.CliNombre);
                     //command.Parameters.AddWithValue("@Age", item.Age);
 
                     connection.Open();

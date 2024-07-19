@@ -31,7 +31,7 @@ namespace Presentacion
 
         private void listar()
         {
-            dtgProductos.DataSource = logicaProductos.Listar(null);
+            dtgProductos.DataSource = logicaProductos.List(null);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Presentacion
             currentItem.PrdDescripcion = txtPrdDescripcion.Text;
             
 
-            logicaProductos.Insertar(currentItem);
+            logicaProductos.Insert(currentItem);
 
             listar();
         }

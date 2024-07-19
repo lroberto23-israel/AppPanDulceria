@@ -31,7 +31,7 @@ namespace Presentacion
 
         private void listar()
         {
-            dtgCategorias.DataSource = logicaCategorias.Listar(null);
+            dtgCategorias.DataSource = logicaCategorias.List(null);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace Presentacion
             currentItem.CatNombre = txtCatNombre.Text;
             currentItem.CatDescripcion = txtCatDescripcion.Text;
 
-            logicaCategorias.Insertar(currentItem);
+            logicaCategorias.Insert(currentItem);
 
             listar();
         }
