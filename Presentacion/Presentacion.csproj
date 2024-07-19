@@ -196,6 +196,9 @@
     <None Include="Resources\categoria1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ingrediente161.png" />
+    <None Include="Resources\pedido121.png" />
+    <None Include="Resources\panaderia121.png" />
     <None Include="Resources\producto12.png" />
     <None Include="Resources\pago12.png" />
     <None Include="Resources\notificacion16.png" />
@@ -219,6 +222,7 @@
     <None Include="Resources\cliente16.png" />
     <None Include="Resources\credencial12.png" />
     <None Include="Resources\cliente161.png" />
+    <None Include="Resources\credencial121.png" />
     <Content Include="Resources\eraser_1200.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

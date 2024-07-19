@@ -193,6 +193,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap credencial121 {
+            get {
+                object obj = ResourceManager.GetObject("credencial121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap credential_3324737 {
             get {
                 object obj = ResourceManager.GetObject("credential_3324737", resourceCulture);
@@ -246,6 +256,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap ingrediente16 {
             get {
                 object obj = ResourceManager.GetObject("ingrediente16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingrediente161 {
+            get {
+                object obj = ResourceManager.GetObject("ingrediente161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +353,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap panaderia121 {
+            get {
+                object obj = ResourceManager.GetObject("panaderia121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pasteleria {
             get {
                 object obj = ResourceManager.GetObject("pasteleria", resourceCulture);
@@ -356,6 +386,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap pedido12 {
             get {
                 object obj = ResourceManager.GetObject("pedido12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pedido121 {
+            get {
+                object obj = ResourceManager.GetObject("pedido121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
