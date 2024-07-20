@@ -100,6 +100,7 @@ namespace Presentacion
         private void btnModificar_Click(object sender, EventArgs e)
         {
             currentItem = new Credenciales();
+            currentItem.CreId = int.Parse(txtCreId.Text);
             currentItem.CliId = int.Parse(cbxListarClientes.SelectedValue.ToString());
             currentItem.CreClave = txtCreClave.Text;
             currentItem.CreEstado= chkEstCredencial.Checked ? 1 : 0;
