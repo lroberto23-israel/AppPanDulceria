@@ -18,7 +18,7 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                using (SqlCommand command = new SqlCommand("sp_GetAllProductos", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -37,11 +37,13 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                using (SqlCommand command = new SqlCommand("sp_InsertProducto", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@prd_nombre", item.PrdNombre);
+                    command.Parameters.AddWithValue("@prd_descripcion", item.PrdDescripcion);
+                    command.Parameters.AddWithValue("@prd_precio", item.PrdPrecio);
+                    command.Parameters.AddWithValue("@cat_id", item.CatId);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -54,12 +56,15 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                using (SqlCommand command = new SqlCommand("sp_UpdateProducto", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@prd_id", item.PrdId);
+                    command.Parameters.AddWithValue("@prd_nombre", item.PrdNombre);
+                    command.Parameters.AddWithValue("@prd_descripcion", item.PrdDescripcion);
+                    command.Parameters.AddWithValue("@prd_precio", item.PrdPrecio);
+                    command.Parameters.AddWithValue("@cat_id", item.CatId);
+                    command.Parameters.AddWithValue("@prd_estado", item.PrdEstado);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -72,10 +77,10 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                using (SqlCommand command = new SqlCommand("sp_DeleteProducto", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    command.Parameters.AddWithValue("@prd_id", item.PrdId);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();

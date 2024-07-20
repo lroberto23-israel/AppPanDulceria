@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstDetPedido = new System.Windows.Forms.CheckBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblEstDetPedido = new System.Windows.Forms.Label();
             this.txtCanPedido = new System.Windows.Forms.TextBox();
             this.txtIdPedDetalle = new System.Windows.Forms.TextBox();
             this.cbxProducto = new System.Windows.Forms.ComboBox();
@@ -43,13 +45,11 @@
             this.dtgDetPedido = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkEstDetPedido = new System.Windows.Forms.CheckBox();
-            this.lblEstDetPedido = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetPedido)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -77,6 +77,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // chkEstDetPedido
+            // 
+            this.chkEstDetPedido.AutoSize = true;
+            this.chkEstDetPedido.Location = new System.Drawing.Point(454, 122);
+            this.chkEstDetPedido.Name = "chkEstDetPedido";
+            this.chkEstDetPedido.Size = new System.Drawing.Size(15, 14);
+            this.chkEstDetPedido.TabIndex = 15;
+            this.chkEstDetPedido.UseVisualStyleBackColor = true;
+            // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(454, 74);
@@ -84,6 +93,15 @@
             this.txtPrecio.Size = new System.Drawing.Size(160, 20);
             this.txtPrecio.TabIndex = 9;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            // 
+            // lblEstDetPedido
+            // 
+            this.lblEstDetPedido.AutoSize = true;
+            this.lblEstDetPedido.Location = new System.Drawing.Point(348, 122);
+            this.lblEstDetPedido.Name = "lblEstDetPedido";
+            this.lblEstDetPedido.Size = new System.Drawing.Size(99, 13);
+            this.lblEstDetPedido.TabIndex = 14;
+            this.lblEstDetPedido.Text = "Estado Det. Pedido";
             // 
             // txtCanPedido
             // 
@@ -200,33 +218,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
-            // chkEstDetPedido
-            // 
-            this.chkEstDetPedido.AutoSize = true;
-            this.chkEstDetPedido.Location = new System.Drawing.Point(454, 122);
-            this.chkEstDetPedido.Name = "chkEstDetPedido";
-            this.chkEstDetPedido.Size = new System.Drawing.Size(15, 14);
-            this.chkEstDetPedido.TabIndex = 15;
-            this.chkEstDetPedido.UseVisualStyleBackColor = true;
-            // 
-            // lblEstDetPedido
-            // 
-            this.lblEstDetPedido.AutoSize = true;
-            this.lblEstDetPedido.Location = new System.Drawing.Point(348, 122);
-            this.lblEstDetPedido.Name = "lblEstDetPedido";
-            this.lblEstDetPedido.Size = new System.Drawing.Size(99, 13);
-            this.lblEstDetPedido.TabIndex = 14;
-            this.lblEstDetPedido.Text = "Estado Det. Pedido";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.pedido;
-            this.pictureBox1.Location = new System.Drawing.Point(226, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 41);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
@@ -275,6 +266,15 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.pedido;
+            this.pictureBox1.Location = new System.Drawing.Point(226, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 41);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmDetallePedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +287,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDetallePedidos";
             this.Text = "FrmDetallePedidos";
+            this.Load += new System.EventHandler(this.FrmDetallePedidos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetPedido)).EndInit();

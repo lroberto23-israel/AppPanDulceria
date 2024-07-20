@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstProducto = new System.Windows.Forms.CheckBox();
+            this.lblEstProducto = new System.Windows.Forms.Label();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.txtPrdDescripcion = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblEstProducto = new System.Windows.Forms.Label();
-            this.chkEstProducto = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
@@ -76,6 +76,24 @@
             this.groupBox1.Size = new System.Drawing.Size(557, 181);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // chkEstProducto
+            // 
+            this.chkEstProducto.AutoSize = true;
+            this.chkEstProducto.Location = new System.Drawing.Point(105, 158);
+            this.chkEstProducto.Name = "chkEstProducto";
+            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
+            this.chkEstProducto.TabIndex = 12;
+            this.chkEstProducto.UseVisualStyleBackColor = true;
+            // 
+            // lblEstProducto
+            // 
+            this.lblEstProducto.AutoSize = true;
+            this.lblEstProducto.Location = new System.Drawing.Point(11, 158);
+            this.lblEstProducto.Name = "lblEstProducto";
+            this.lblEstProducto.Size = new System.Drawing.Size(86, 13);
+            this.lblEstProducto.TabIndex = 11;
+            this.lblEstProducto.Text = "Estado Producto";
             // 
             // cbxCategoria
             // 
@@ -186,6 +204,7 @@
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.Size = new System.Drawing.Size(545, 141);
             this.dtgProductos.TabIndex = 0;
+            this.dtgProductos.SelectionChanged += new System.EventHandler(this.dtgProductos_SelectionChanged);
             // 
             // groupBox3
             // 
@@ -210,6 +229,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -222,6 +242,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -234,6 +255,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -246,6 +268,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pictureBox1
             // 
@@ -256,24 +279,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblEstProducto
-            // 
-            this.lblEstProducto.AutoSize = true;
-            this.lblEstProducto.Location = new System.Drawing.Point(11, 158);
-            this.lblEstProducto.Name = "lblEstProducto";
-            this.lblEstProducto.Size = new System.Drawing.Size(86, 13);
-            this.lblEstProducto.TabIndex = 11;
-            this.lblEstProducto.Text = "Estado Producto";
-            // 
-            // chkEstProducto
-            // 
-            this.chkEstProducto.AutoSize = true;
-            this.chkEstProducto.Location = new System.Drawing.Point(105, 158);
-            this.chkEstProducto.Name = "chkEstProducto";
-            this.chkEstProducto.Size = new System.Drawing.Size(15, 14);
-            this.chkEstProducto.TabIndex = 12;
-            this.chkEstProducto.UseVisualStyleBackColor = true;
             // 
             // FrmProductos
             // 

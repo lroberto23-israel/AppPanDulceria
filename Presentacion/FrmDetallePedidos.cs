@@ -26,5 +26,10 @@ namespace Presentacion
         {
 
         }
+
+        private void FrmDetallePedidos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
