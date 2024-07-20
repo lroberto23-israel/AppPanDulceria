@@ -17,7 +17,7 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_List", connection))
+                using (SqlCommand command = new SqlCommand("sp_GetAllCredenciales", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -36,12 +36,13 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                using (SqlCommand command = new SqlCommand("sp_InsertCredencial", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
-
+                    //command.Parameters.AddWithValue("@cre_id", item.CreId);
+                    command.Parameters.AddWithValue("@cli_id", item.CliId);
+                    command.Parameters.AddWithValue("@cre_clave", item.CreClave);
+                    //command.Parameters.AddWithValue("@cre_estado", item.CreEstado);
                     connection.Open();
                     int result = command.ExecuteNonQuery();
                     return result > 0;
@@ -53,12 +54,13 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                using (SqlCommand command = new SqlCommand("sp_UpdateCredencial", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@cre_id", item.CreId);
+                    command.Parameters.AddWithValue("@cli_id", item.CliId);
+                    command.Parameters.AddWithValue("@cre_clave", item.CreClave);
+                    command.Parameters.AddWithValue("@cre_estado", item.CreEstado);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -71,10 +73,10 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                using (SqlCommand command = new SqlCommand("sp_DeleteCredencial", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    command.Parameters.AddWithValue("@cre_id", item.CreId);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();

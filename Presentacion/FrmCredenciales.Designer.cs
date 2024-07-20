@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxListarClientes = new System.Windows.Forms.ComboBox();
+            this.chkEstCredencial = new System.Windows.Forms.CheckBox();
+            this.lblEstCredencial = new System.Windows.Forms.Label();
             this.lblListarClientes = new System.Windows.Forms.Label();
             this.txtCreClave = new System.Windows.Forms.TextBox();
             this.txtCreId = new System.Windows.Forms.TextBox();
@@ -38,14 +41,11 @@
             this.dtgCredenciales = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chkEstCredencial = new System.Windows.Forms.CheckBox();
-            this.lblEstCredencial = new System.Windows.Forms.Label();
-            this.cbxListarClientes = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCredenciales)).BeginInit();
@@ -68,6 +68,32 @@
             this.groupBox1.Size = new System.Drawing.Size(532, 116);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cbxListarClientes
+            // 
+            this.cbxListarClientes.FormattingEnabled = true;
+            this.cbxListarClientes.Location = new System.Drawing.Point(114, 28);
+            this.cbxListarClientes.Name = "cbxListarClientes";
+            this.cbxListarClientes.Size = new System.Drawing.Size(149, 21);
+            this.cbxListarClientes.TabIndex = 15;
+            // 
+            // chkEstCredencial
+            // 
+            this.chkEstCredencial.AutoSize = true;
+            this.chkEstCredencial.Location = new System.Drawing.Point(383, 88);
+            this.chkEstCredencial.Name = "chkEstCredencial";
+            this.chkEstCredencial.Size = new System.Drawing.Size(15, 14);
+            this.chkEstCredencial.TabIndex = 14;
+            this.chkEstCredencial.UseVisualStyleBackColor = true;
+            // 
+            // lblEstCredencial
+            // 
+            this.lblEstCredencial.AutoSize = true;
+            this.lblEstCredencial.Location = new System.Drawing.Point(290, 88);
+            this.lblEstCredencial.Name = "lblEstCredencial";
+            this.lblEstCredencial.Size = new System.Drawing.Size(93, 13);
+            this.lblEstCredencial.TabIndex = 13;
+            this.lblEstCredencial.Text = "Estado Credencial";
             // 
             // lblListarClientes
             // 
@@ -130,6 +156,7 @@
             this.dtgCredenciales.Name = "dtgCredenciales";
             this.dtgCredenciales.Size = new System.Drawing.Size(520, 166);
             this.dtgCredenciales.TabIndex = 0;
+            this.dtgCredenciales.SelectionChanged += new System.EventHandler(this.dtgCredenciales_SelectionChanged);
             // 
             // lblTitulo
             // 
@@ -154,42 +181,6 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
-            // chkEstCredencial
-            // 
-            this.chkEstCredencial.AutoSize = true;
-            this.chkEstCredencial.Location = new System.Drawing.Point(383, 88);
-            this.chkEstCredencial.Name = "chkEstCredencial";
-            this.chkEstCredencial.Size = new System.Drawing.Size(15, 14);
-            this.chkEstCredencial.TabIndex = 14;
-            this.chkEstCredencial.UseVisualStyleBackColor = true;
-            // 
-            // lblEstCredencial
-            // 
-            this.lblEstCredencial.AutoSize = true;
-            this.lblEstCredencial.Location = new System.Drawing.Point(290, 88);
-            this.lblEstCredencial.Name = "lblEstCredencial";
-            this.lblEstCredencial.Size = new System.Drawing.Size(93, 13);
-            this.lblEstCredencial.TabIndex = 13;
-            this.lblEstCredencial.Text = "Estado Credencial";
-            // 
-            // cbxListarClientes
-            // 
-            this.cbxListarClientes.FormattingEnabled = true;
-            this.cbxListarClientes.Location = new System.Drawing.Point(114, 28);
-            this.cbxListarClientes.Name = "cbxListarClientes";
-            this.cbxListarClientes.Size = new System.Drawing.Size(149, 21);
-            this.cbxListarClientes.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.credential_3324737;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.borrar1;
@@ -201,6 +192,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -213,6 +205,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -225,6 +218,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -237,6 +231,17 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.credential_3324737;
+            this.pictureBox1.Location = new System.Drawing.Point(126, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmCredenciales
             // 
@@ -250,6 +255,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmCredenciales";
             this.Text = "FrmCredenciales";
+            this.Load += new System.EventHandler(this.FrmCredenciales_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
