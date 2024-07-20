@@ -99,7 +99,6 @@ namespace Presentacion
 
         private void dtgCategorias_SelectionChanged(object sender, EventArgs e)
         {
-
             if (dtgCategorias.SelectedRows.Count > 0)
             {
                 //cli_id, cli_nombre, cli_correo, cli_telefono, cli_direccion

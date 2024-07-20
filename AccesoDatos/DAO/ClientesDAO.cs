@@ -36,11 +36,15 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Insert", connection))
+                using (SqlCommand command = new SqlCommand("sp_InsertCliente", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Name", item.CliNombre);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@cli_id", item.CliId);
+                    command.Parameters.AddWithValue("@cli_nombre", item.CliNombre);
+                    command.Parameters.AddWithValue("@cli_correo", item.CliCorreo);
+                    command.Parameters.AddWithValue("@cli_telefono", item.CliTelefono);
+                    command.Parameters.AddWithValue("@cli_direccion", item.CliDireccion);
+                    command.Parameters.AddWithValue("@cli_estado", item.CliEstado);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -53,12 +57,15 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Update", connection))
+                using (SqlCommand command = new SqlCommand("sp_UpdateCliente", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
-                    //command.Parameters.AddWithValue("@Name", item.Name);
-                    //command.Parameters.AddWithValue("@Age", item.Age);
+                    command.Parameters.AddWithValue("@cli_id", item.CliId);
+                    command.Parameters.AddWithValue("@cli_nombre", item.CliNombre);
+                    command.Parameters.AddWithValue("@cli_correo", item.CliCorreo);
+                    command.Parameters.AddWithValue("@cli_telefono", item.CliTelefono);
+                    command.Parameters.AddWithValue("@cli_direccion", item.CliDireccion);
+                    command.Parameters.AddWithValue("@cli_estado", item.CliEstado);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -71,10 +78,10 @@ namespace AccesoDatos.DAO
         {
             using (SqlConnection connection = conexion.AbrirConnection())
             {
-                using (SqlCommand command = new SqlCommand("sp_Delete", connection))
+                using (SqlCommand command = new SqlCommand("sp_DeleteCliente", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    //command.Parameters.AddWithValue("@Id", item.Id);
+                    command.Parameters.AddWithValue("@cli_id", item.CliId);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();

@@ -35,6 +35,7 @@ namespace Presentacion
             txtCliCorreo.Text = "";
             txtCliTelefono.Text = "";
             txtCliDireccion.Text = "";
+            chkEstCliente.Checked = true;
 
         }
 
@@ -45,10 +46,17 @@ namespace Presentacion
             currentItem.CliCorreo = txtCliCorreo.Text;
             currentItem.CliTelefono = txtCliTelefono.Text;
             currentItem.CliDireccion = txtCliDireccion.Text;
+            currentItem.CliEstado = chkEstCliente.Checked?1:0;
 
-            logicaClientes.Insert(currentItem);
-
-            listar();
+            if (logicaClientes.Insert(currentItem))
+            {
+                listar();
+                MessageBox.Show("Ingreso exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -64,14 +72,52 @@ namespace Presentacion
             {
                 //cli_id, cli_nombre, cli_correo, cli_telefono, cli_direccion
                 var selectedRow = dtgClientes.SelectedRows[0];
-                int id = Convert.ToInt32(selectedRow.Cells["cli_id"].Value);
-                string name = selectedRow.Cells["cli_nombre"].Value.ToString();
-                string age = selectedRow.Cells["cli_correo"].Value.ToString();
-
-                // Mostrar los datos seleccionados
-                MessageBox.Show($"ID: {id}, Name: {name}, Age: {age}");
+                txtCliId.Text = selectedRow.Cells["cli_id"].Value.ToString();
+                txtCliNombre.Text = selectedRow.Cells["cli_nombre"].Value.ToString();
+                txtCliCorreo.Text = selectedRow.Cells["cli_correo"].Value.ToString();
+                txtCliTelefono.Text = selectedRow.Cells["cli_telefono"].Value.ToString();
+                txtCliDireccion.Text = selectedRow.Cells["cli_direccion"].Value.ToString();
+                chkEstCliente.Checked = selectedRow.Cells["cli_estado"].Value.ToString() == "1";
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            currentItem = new Clientes();
+            currentItem.CliId = int.Parse(txtCliId.Text);
+            currentItem.CliNombre = txtCliNombre.Text;
+            currentItem.CliCorreo = txtCliCorreo.Text;
+            currentItem.CliTelefono = txtCliTelefono.Text;
+            currentItem.CliDireccion = txtCliDireccion.Text;
+            currentItem.CliEstado = chkEstCliente.Checked ? 1 : 0;
+
+            if (logicaClientes.Update(currentItem))
+            {
+                listar();
+                MessageBox.Show("Actualizacion exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            currentItem = new Clientes();
+            currentItem.CliId = int.Parse(txtCliId.Text);
+
+            if (logicaClientes.Delete(currentItem))
+            {
+                listar();
+                MessageBox.Show("Eliminado exitosamente");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            listar();
+
+        }
     }
 }
